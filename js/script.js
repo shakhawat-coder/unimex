@@ -7,3 +7,10 @@
     });
   }); 
  AOS.init(); 
+
+ $('.slider_wrapper').slick({
+  infinite: true,
+  prevArrow:".prev",
+  nextArrow:".next",
+  speed:1000
+});
