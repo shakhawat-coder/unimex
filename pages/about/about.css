@@ -1,5 +1,5 @@
 /* <!-- ==============our perfect store section==========?? --> */
-#perfect_store .section_header h6{
+.section_header h6{
     margin-bottom: 8px;
     text-transform: uppercase;
     color: var(--color-link-hover);
@@ -7,7 +7,7 @@
     font-size: 12px;
     line-height: 15px;   
 }
-#perfect_store .section_header h3{
+ .section_header h3{
     color: var(--color-main);
     margin-bottom: 15px;
     font-weight: 600;
@@ -16,7 +16,7 @@
     letter-spacing: -.03em;
     
 }
-#perfect_store .section_header p{ 
+ .section_header p{ 
     margin: 0;
     font-weight: 500;
     font-size: 14px;
@@ -25,7 +25,7 @@
     margin: 0 auto;
     color: var(--color-text-body);
 }
-#perfect_store .about_image{
+.about_image{
     border-radius: 10px;
     width: 100%;
     height: 490px;
@@ -43,8 +43,9 @@
     transform: scale(1.05);
 }
 /* ==========counter section============= */
-#counter{
-    margin-bottom: 80px;
+#counter .counter_wrapper{
+    padding-bottom: 80px;
+    border-bottom: 1px solid #E5E8EC;
 }
 .counter_item p {
     font-weight: 700;
@@ -64,5 +65,40 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
+    color: var(--color-text-body);
+}
+
+/* ===============why choose us =============== */
+#why_choose_us .section_header{
+    padding: 100px 0 30px;
+}
+.choose_us_item_wrapper .choose_us_image{
+    width: 100%;
+    height: 548px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.choose_us_item_wrapper .choose_us_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all linear .3s;
+}
+.choose_us_item_wrapper .choose_us_image:hover img{
+    transform: scale(1.05);
+}
+.choose_us_item_wrapper .choose_us_item h4{
+    margin: 25px 0 10px;
+    color: var(--color-main);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+.choose_us_item_wrapper .choose_us_item p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
     color: var(--color-text-body);
 }
