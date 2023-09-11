@@ -14,3 +14,19 @@
   nextArrow:".next",
   speed:1000
 });
+$('.specific_item_catagory_wrapper').slick({
+  infinite: false,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+});
+// =================back to top button=============
+let toTop = document.querySelector(".back_to_top");
+window.addEventListener("scroll", () => {
+  if (window.scrollY>10){
+    toTop.classList.add("show");
+  }else{
+    toTop.classList.remove("show");
+  }
+  
+})
