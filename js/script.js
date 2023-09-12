@@ -20,21 +20,29 @@ $('.specific_item_catagory_wrapper').slick({
   slidesToScroll: 1,
   autoplay: true,
 });
-$('.tem_member_wrapper').slick({
+$(' .tem_member_wrapper').slick({
   infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
-  prevArrow:".prev",
-  nextArrow:".next",
+  prevArrow:"#team .prev",
+  nextArrow:"#team .next",
 });
-$('.testimony_wrapper').slick({
-  infinite: false,
+$('#testimony .testimony_wrapper').slick({
+  infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   prevArrow:".testimony_slider .prev",
   nextArrow:".testimony_slider .next",
+});
+$('.branding_wrapper').slick({
+  infinite: false,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  prevArrow:"#branding .prev",
+  nextArrow:"#branding .next",
 });
 // =================back to top button=============
 let toTop = document.querySelector(".back_to_top");
