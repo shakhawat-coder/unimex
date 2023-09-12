@@ -58,10 +58,10 @@ ol,ul,menu{
 h1,h2,h3,h4,h5,h6,p{
     line-height: .8;
 }
-.row,.col{
+/* .row,.col{
     padding: 0 !important;
     margin: 0 !important;
-}
+} */
 .row>* {
    padding: 0;
    margin: 0;

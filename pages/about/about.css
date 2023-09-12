@@ -69,6 +69,9 @@
 }
 
 /* ===============why choose us =============== */
+#why_choose_us{
+    padding-bottom: 80px;
+}
 #why_choose_us .section_header{
     padding: 100px 0 30px;
 }
@@ -101,4 +104,184 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--color-text-body);
+}
+
+/* ===============faq section========== */
+#faq{
+    background: var(--color-bg-body);
+    padding: 80px 0;
+}
+#faq .section_header{
+    margin-bottom: 35px;
+}
+#faq .faq_wrapper .accordion-item{
+    background: #ffffff;
+    border-radius: 20px;
+    /* padding: 20px 30px; */
+    margin-bottom: 20px;
+    border: none;
+}
+.accordion {
+    --bs-accordion-bg: none;
+    --bs-accordion-active-bg: none;
+}
+.accordion-button.collapsed::after {
+    margin-left: auto;
+    content: "+";
+    background-image: none;
+    font-size: 18px;
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+.accordion-button:focus {
+    z-index: 0;
+    outline: 0;
+    box-shadow: none;
+}
+.accordion-header button:focus {
+    outline: 0;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "-";
+    background-image: none;
+    font-size: 18px;
+    transform:none;
+}
+.accordion-button:not(.collapsed) .accordion-body{
+    display: none;
+}
+#faq .accordion-header button a{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-link-menu-heading);
+}
+#faq .accordion-body{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-text-body);
+}
+
+/* <!-- ===============team section============= --> */
+#team{
+    padding: 80px 0;
+}
+#team .section_header{
+    margin-bottom: 35px;
+}
+#team .prev,#team .next {
+    /* display: none !important; */
+}
+.tem_member_wrapper:hover #team .prev{
+    display: block !important;
+}
+.team_slider:hover #team .next{
+    display: block !important;
+}
+.tem_member_wrapper .slick-prev,.tem_member_wrapper .slick-next{
+    display: none !important;
+}
+.prev:hover, .next:hover {
+    background: var(--color-link-hover);
+    opacity: 1;
+    color: #ffffff;
+}
+.prev{
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.next{
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tem_member_wrapper .team_member{
+    padding: 0 15px ;
+}
+
+.tem_member_wrapper .team_member .member_img{
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    background: grey;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+.tem_member_wrapper .team_member .member_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tem_member_wrapper .team_member .h6 {
+    margin: 0;
+    background-repeat: no-repeat;
+    color: var(--color-main);
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+.tem_member_wrapper .team_member span {
+    margin: 0;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var( --color-text-body);
+}
+.tem_member_wrapper .team_member p {
+    color: #4d5574;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ================teatimoni section========= */
+#testimony{
+    background: var(--color-bg-body);
+    padding: 80px 0;
+}
+
+.testimony_item .testimony_image{
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: gray;
+    margin:0 auto ;
+}
+.testimony_content p{
+    width: 525px;
+    margin: 30px auto 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--color-text-body);
+}
+.testimony_content .star i{
+    color: var(--color-star-product);
+    font-size: 16px;
+}
+.testimony_content h6{
+    color: var(--color-link-menu-hover);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 25px 0 5px;
+}
+.testimony_content span{
+    text-transform: capitalize;
+    color: #8d979e;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
 }
