@@ -154,7 +154,7 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
-    color: var(--color-link-menu-heading);
+    color: var(--color-text-body);
 }
 #faq .accordion-body{
     font-weight: 500;
@@ -299,25 +299,5 @@
 .branding_wrapper{
     padding: 0 15px;
 }
-/* ==============Benefit section============= */
-#benefit .benefit_item_wrapper{
-    padding: 35px 0;
-    border-bottom: 1px solid #E5E8EC;
 
-}
-#benefit .benefit_content h4 {
-    margin: 20px 0 3px;
-    color: var(--color-main);
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-}
-#benefit .benefit_content p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    color: var(--color-text-body);
-}
 

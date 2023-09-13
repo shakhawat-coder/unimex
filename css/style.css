@@ -58,16 +58,16 @@ ol,ul,menu{
 h1,h2,h3,h4,h5,h6,p{
     line-height: .8;
 }
-/* .row,.col{
+.row,.col{
     padding: 0 !important;
     margin: 0 !important;
-} */
+}
 .row>* {
    padding: 0;
    margin: 0;
 }
 .container{
-    width: 1200px;
+    min-width: 1200px !important;
     margin: 0 auto;
 }
 @media (min-width:992px) and (max-width:1200px){
@@ -677,6 +677,27 @@ input {
     font-size: 13px;
     line-height: 15px;
     color: #515d66;
+}
+/* ==============Benefit section============= */
+#benefit .benefit_item_wrapper{
+    padding: 35px 0;
+    border-bottom: 1px solid #E5E8EC;
+
+}
+#benefit .benefit_content h4 {
+    margin: 20px 0 3px;
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+#benefit .benefit_content p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--color-text-body);
 }
 
 /* ================footer section============= */
