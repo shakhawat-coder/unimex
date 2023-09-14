@@ -13,14 +13,14 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../../css/slick .min.css" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="./notfound.css">
+    <link rel="stylesheet" href="./contact.css">
 </head>
 
 <body id="top">
     <header class="navbar top_navbar navbar-expand-lg">
         <div class="container">
             <div class="logo col-md-3 order-2 order-lg-1">
-                <a href="/"><img src="../..//images/logo.avif" alt="" /></a>
+                <a href="/"><img src="../../images/logo.avif" alt="" /></a>
             </div>
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
@@ -308,13 +308,9 @@
                             <li>
                                 <a class="dropdown-item" href="../about/about.html">About Us</a>
                             </li>
-                            <li>
-                                <a class="dropdown-item" href="../faqs/faqs.html">FAQs</a>
-                            </li>
+                            <li><a class="dropdown-item" href="../faqs/faqs.html">FAQs</a></li>
                             <li><a class="dropdown-item" href="#">Our Team</a></li>
-                            <li>
-                                <a class="dropdown-item" href="../notfound/notfound.html">Page 404</a>
-                            </li>
+                            <li><a class="dropdown-item" href="../notfound/notfound.html">Page 404</a></li>
                             <li><a class="dropdown-item" href="#">Gift Cards</a></li>
                         </ul>
                     </li>
@@ -333,7 +329,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../contact/contact.html">Contact Us</a>
+                        <a class="nav-link" aria-current="page" href="./contact.html">Contact Us</a>
                     </li>
                 </ul>
                 <div class="custom_html d-flex align-items-center column-gap-2">
@@ -355,31 +351,203 @@
         </div>
     </nav>
 
-    <!-- ============================== -->
+    <!-- ======================== -->
     <div id="breadcrumb" aria-label="breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">404</li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
             </ul>
         </div>
     </div>
 
-    <!-- ==================error content=================== -->
-    <section id="error">
+    <!-- ===============map section================= -->
+    <div id="map">
+        <div class="container ">
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1085.9348247130665!2d90.37839518739867!3d23.724745478970668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8d229210797%3A0x8650302ea8de41ca!2sMedical%20Staff%20Quarter%20Jame%20Masjid!5e0!3m2!1sen!2sbd!4v1694667545894!5m2!1sen!2sbd"
+                    width="1170" height="500" style="border:0;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============================contact info and form============== -->
+    <section id="contact_info">
         <div class="container">
-            <div class="text-center">
-                <div class="error_image">
-                    <img src="../../images/404_360.webp" alt="">
-                </div>
-                <div class="error_content">
-                    <h2>Opps! Page not found.</h2>
-                    <p>Sorry for the inconvenience. Go to our homepage or check out our latest collections.</p>
-                    <a href="/">BACK TO HOMEPAGE</a>
+            <div class="main_content">
+                <div class="row">
+                    <div class="col-lg-6 pe-4">
+                        <div class="contact_form text-center">
+                            <form method="post" action="" id="contact-form" class="form-contact">
+                                <h3>Get in Touch</h3>
+                                <p class="content">Your email address will not be published. Required fields
+                                    are marked *</p>
+                                <div class="row">
+                                    <div class=" col-md-6 col-lg-6 pe-3">
+                                        <input placeholder="Name *" class="input-info" id="name" required=""
+                                            name="contact[name]" type="text" value="">
+                                    </div>
+                                    <div class=" col-md-6 col-lg-6 ps-2">
+                                        <input placeholder="Email *" value="" required="" name="contact[email]"
+                                            class="input-info" id="email" type="text">
+                                    </div>
+                                </div>
+                                <input required="" type="tel" id="ContactForm-phone" class="input-info"
+                                    autocomplete="tel" name="contact[Phone Number]" pattern="[0-9\-]*" value=""
+                                    placeholder="Phone Number *">
+                                <textarea placeholder="Message *" rows="8" class="input-info input-note"
+                                    name="contact[body]" required="" id="message"></textarea>
+                                <div class="group-button">
+                                    <button class="button submit" type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-4">
+                        <div class="contact_information">
+                            <h3>Contact Information</h3>
+                            <p class="content">Class aptent taciti sociosqu ad litora torquent per conubia nostra per
+                                inceptos pretium.</p>
+
+                            <div class="info_item">
+                                <h4>Location store:</h4>
+                                <p>268 St, South New York/NY 98944, United States.</p>
+                            </div>
+                            <div class="info_item">
+                                <h4>Work time:</h4>
+                                <p>Monday – Friday: 9:00-20:00 <br>
+                                    Saturady: 11:00 – 15:00</p>
+                            </div>
+                            <div class="info_item">
+                                <h4>Phone Number:</h4>
+                                <p>
+                                    <a class="phone" href="tel:+222-1800-262">+222-1800-262</a>
+                                    <a class="phone" href="tel:(+100) 666-456-7890">(+100) 666-456-7890</a>
+                                </p>
+                            </div>
+                            <div class="info_item">
+                                <h4>Email Address:</h4>
+                                <p>
+                                    <a href="mailto:Aloshopify@alothemes.com">Aloshopify@alothemes.com</a>
+                                    <a href="mailto:aloshopify@alothemes.com">aloshopify@alothemes.com</a>
+                                </p>
+                            </div>
+                            <div class="info_item">
+                                <h4>Social Accounts:</h4>
+                                <div class="social_media d-flex">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-title="Twitter"><i
+                                            class="fa-brands fa-twitter"></i></a>
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="fa-brands fa-google"></i></a>
+                                    <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+                                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                    <a href=""><i class="fa-brands fa-tumblr"></i></a>
+                                    <a href=""><i class="fa-brands fa-snapchat"></i></a>
+                                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                                    <a href=""><i class="fa-brands fa-vimeo"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- <div id="contact_info">
+       
+                           
+                                <div class="info-item">
+                                    <h2>Social Accounts:</h2>
+                                    <div class="laber-social-link socials clearfix">
+                                        <ul class="list-socials ">
+
+                                            <li class="twitter">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Twitter">
+                                                    <i class="fa fa-twitter"></i>
+                                                    <span class="alo_tooltip-content">Twitter</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="facebook">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Facebook">
+                                                    <i class="fa fa-facebook-f"></i>
+                                                    <span class="alo_tooltip-content">Facebook</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="google">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Google">
+                                                    <i class="fa fa-google" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Google</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="pinterest">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Pinterest">
+                                                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Pinterest</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="instagram">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Instargram">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Instagram</span>
+                                                </a>
+                                            </li>
+
+
+
+                                            <li class="tumblr">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Tumblr">
+                                                    <i class="fa fa-tumblr" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Tumblr</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="snapcha">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Snapchat">
+                                                    <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Snapcha</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="youtube">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Youtube">
+                                                    <i class="fa fa-youtube"></i>
+                                                    <span class="alo_tooltip-content">Youtube</span>
+                                                </a>
+                                            </li>
+
+
+                                            <li class="vimeo">
+                                                <a class="alo_tooltip" target="_blank" href="" title="Vimeo">
+                                                    <i class="fa fa-vimeo" aria-hidden="true"></i>
+                                                    <span class="alo_tooltip-content">Vimeo</span>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
     <!-- ================benefit section=========== -->
     <section id="benefit">
@@ -456,9 +624,12 @@
                                 <path
                                     d="M6.10693 9.6801V18.9102C6.10693 20.3262 7.25788 21.4741 8.67764 21.4741H8.992C9.52827 21.4741 9.96299 21.9088 9.96299 22.4451C9.96299 23.5022 10.0524 25.0661 11.112 25.0365C11.8308 25.0164 12.0877 24.14 12.4786 23.5381L12.991 22.749C13.5074 21.9539 14.3912 21.4741 15.3393 21.4741H23.0736C25.0613 21.4741 26.6726 19.8673 26.6726 17.8849V9.76549C26.6726 7.82707 25.4022 6.13737 23.4592 6.09062C21.3657 6.04023 18.4467 6.09063 16.3898 6.09063H9.70539C7.71772 6.09063 6.10693 7.69769 6.10693 9.6801Z"
                                     stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
-                                <ellipse cx="11.2482" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
-                                <ellipse cx="16.3898" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
-                                <ellipse cx="21.531" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
+                                <ellipse cx="11.2482" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1">
+                                </ellipse>
+                                <ellipse cx="16.3898" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1">
+                                </ellipse>
+                                <ellipse cx="21.531" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1">
+                                </ellipse>
                             </svg>
                         </div>
                         <div class="benefit_content">
@@ -473,7 +644,8 @@
                                 <path d="M20.8916 19.0584L9.06588 19.2219C4.62937 19.2832 1 15.7037 1 11.2667V11.2667"
                                     stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
                                 <rect x="1" y="2.46698" width="20.5333" height="20.5333" rx="2.8" stroke="#2B38D1"
-                                    stroke-width="1.5"></rect>
+                                    stroke-width="1.5">
+                                </rect>
                                 <path d="M6.86621 3.93333V1" stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round">
                                 </path>
                                 <path d="M15.667 3.93333V1" stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round">
