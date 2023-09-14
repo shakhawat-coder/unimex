@@ -678,6 +678,57 @@ input {
     line-height: 15px;
     color: #515d66;
 }
+
+/* =====================Blog section=============== */
+#blog{
+    background: var(--color-bg-body);
+    padding: 60px 0;
+}
+#blog .card{
+    border: 0;
+}
+#blog .card-body{
+    padding: 27px 30px;
+}
+#blog .card-title{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--color-link-hover);
+    margin-bottom: 7px;
+}
+#blog a h4{
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-link);
+}
+#blog span{
+    color: #8d979e;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+#blog .card-text{
+    margin-top: 18px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-text-body);
+    padding-bottom: 22px;
+    border-bottom: 1px solid #E5E8EC;
+}
+#blog .card-link{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: var(--color-link);
+    margin-bottom: 7px;
+}
 /* ==============Benefit section============= */
 #benefit {
     border-top: 1px solid #E5E8EC;
