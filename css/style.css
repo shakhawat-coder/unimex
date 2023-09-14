@@ -786,6 +786,10 @@ input {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    transition: all linear .3s;
+}
+.main_footer .signup-newsletter-form .submit-btn:hover{
+    background: var(--color-btn-hover);
 }
 .truncate {
     overflow: hidden;
