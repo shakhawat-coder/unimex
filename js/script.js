@@ -76,6 +76,22 @@ $('.recommend_product_wrapper').slick({
   prevArrow:".recommend_product_slider .prev",
   nextArrow:".recommend_product_slider .next",
 });
+$('.related_product_wrapper').slick({
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  prevArrow:".related_product_slider .prev",
+  nextArrow:".related_product_slider .next",
+});
+$('.recently_viewd_product_wrapper').slick({
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  prevArrow:".recently_viewd_product_slider .prev",
+  nextArrow:".recently_viewd_product_slider .next",
+});
 $('.top_selling_product_wrapper').slick({
   infinite: false,
   slidesToShow: 2,
@@ -96,11 +112,11 @@ window.addEventListener("scroll", () => {
 })
 // =============countdown section=============
 function getTimeRemaining(endtime) {
-  var t = Date.parse(endtime) - Date.now();
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  let t = Date.parse(endtime) - Date.now();
+  let seconds = Math.floor((t / 1000) % 60);
+  let minutes = Math.floor((t / 1000 / 60) % 60);
+  let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  let days = Math.floor(t / (1000 * 60 * 60 * 24));
   return {
     'total': t,
     'days': days,
@@ -111,14 +127,14 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(id, endtime) {
-  var clock = document.getElementById(id);
-  var daysSpan = clock.querySelector('.days');
-  var hoursSpan = clock.querySelector('.hours');
-  var minutesSpan = clock.querySelector('.minutes');
-  var secondsSpan = clock.querySelector('.seconds');
+  let clock = document.getElementById(id);
+  let daysSpan = clock.querySelector('.days');
+  let hoursSpan = clock.querySelector('.hours');
+  let minutesSpan = clock.querySelector('.minutes');
+  let secondsSpan = clock.querySelector('.seconds');
 
   function updateClock() {
-    var t = getTimeRemaining(endtime);
+    let t = getTimeRemaining(endtime);
 
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -136,3 +152,9 @@ function initializeClock(id, endtime) {
 // count down timer:
 var deadline = new Date(Date.now() + 1 * 30 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
+
+// =======================magnifying image===============
+
+  
+
+// ===========mixitup=================
