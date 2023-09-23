@@ -596,7 +596,7 @@ input {
     transition: all linear .3s;
 }
 .images_card{
-    padding: 0 5px;
+    padding: 0 ;
     overflow: hidden;
 }
 .images_card:hover img{
@@ -793,6 +793,7 @@ input {
     opacity: 1;
     color: #ffffff;
 }
+
   .single_item .card{
     padding: 20px;
     overflow: hidden;
@@ -800,6 +801,10 @@ input {
     margin-left: 10px;
     border: none;
   }
+  .slick-track .slick-current .single_item .card,
+  .slick-track .slick-current .top_selling_item .card{
+    margin-left: 0px;
+}
   .single_item .card_icon{
     position: absolute;
     right: 10px;
@@ -998,9 +1003,7 @@ input {
     color: #ffffff;
 }
 
-#feature_product .card{
-    margin: 0 5px;
-}
+
 /* =============Top selling product========== */
 #top_selling{
     background: var(--color-bg-body);
@@ -1144,6 +1147,14 @@ input {
     font-size: 16px;
     line-height: 20px;
     color: var(--color-link);
+    transition: all linear .3s;
+}
+#blog a{
+    transition: all linear .3s;
+}
+#blog a h4:hover,
+#blog a:hover{
+    color: var(--color-link-hover);
 }
 #blog span{
     color: #8d979e;

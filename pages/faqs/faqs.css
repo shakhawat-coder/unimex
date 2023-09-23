@@ -1,12 +1,6 @@
 #breadcrumb{
-    /* padding: 60px 0; */
     height: 190px;
     display: flex;
-    /* align-items: center; */
-    
-
-}
-.breadcrumb_wrapper{
 }
 .breadcrumb_wrapper h2{
     font-style: normal;
