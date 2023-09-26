@@ -1133,7 +1133,8 @@ input {
 #blog .card-body{
     padding: 27px 30px;
 }
-#blog .card-title{
+#blog .card-title,
+.content_blog .cat_title{
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
