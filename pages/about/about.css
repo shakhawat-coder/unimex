@@ -120,10 +120,6 @@
     margin-bottom: 20px;
     border: none;
 }
-.accordion {
-    /* --bs-accordion-bg: none;
-    --bs-accordion-active-bg: none; */
-}
 .accordion-button.collapsed::after {
     margin-left: auto;
     content: "+";
@@ -171,9 +167,6 @@
 }
 #team .section_header{
     margin-bottom: 35px;
-}
-#team .prev,#team .next {
-    /* display: none !important; */
 }
 .tem_member_wrapper:hover #team .prev{
     display: block !important;

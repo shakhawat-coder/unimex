@@ -136,3 +136,28 @@
     line-height: 24px;
     color: var(--color-text-body);
 }
+
+/* ====================responsive ========================= */
+@media (max-width:575.99px) {
+.faq_main_body {
+    margin-left: 0px;
+    padding: 0 10px;
+    border-left: none;
+}
+}
+/* =====================small screen============= */
+@media (min-width:576px) and (max-width:767.99px) {
+    .faq_main_body {
+        margin-left: 0px;
+        padding: 0 10px;
+        border-left: none;
+    }
+}
+/* =====================medium screen============= */
+@media (min-width:768px) and (max-width:991.99px) {
+    .faq_main_body {
+        margin-left: 0px;
+        padding: 0 10px;
+        border-left: none;
+    }
+}
