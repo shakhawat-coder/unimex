@@ -117,13 +117,12 @@
 #faq .faq_wrapper .accordion-item{
     background: #ffffff;
     border-radius: 20px;
-    /* padding: 20px 30px; */
     margin-bottom: 20px;
     border: none;
 }
 .accordion {
-    --bs-accordion-bg: none;
-    --bs-accordion-active-bg: none;
+    /* --bs-accordion-bg: none;
+    --bs-accordion-active-bg: none; */
 }
 .accordion-button.collapsed::after {
     margin-left: auto;
@@ -140,13 +139,16 @@
 .accordion-header button:focus {
     outline: 0;
 }
-
+.accordion-button:not(.collapsed) {
+    background-color: #ffffff;
+}
 .accordion-button:not(.collapsed)::after {
     content: "-";
     background-image: none;
     font-size: 18px;
     transform:none;
 }
+
 .accordion-button:not(.collapsed) .accordion-body{
     display: none;
 }
@@ -298,6 +300,69 @@
 }
 .branding_wrapper{
     padding: 0 15px;
+    justify-content: space-between;
+}
+.branding_item img{
+    width: 100%;
 }
 
+
+/* ==============responsive ===================== */
+/* =================Extra small device========= */
+@media (max-width:575.99px) {
+    .section_header p {
+        
+        width: 100%;
+    }
+    .about_image {
+        height: 106px;
+        margin: 30px 0 40px;
+    }
+    #counter .counter_wrapper {
+        padding-bottom: 0;
+    }
+    .counter_item {
+        padding-bottom: 40px;
+    }
+
+    .choose_us_item_wrapper .choose_us_image {
+        height: 373px;
+    }
+
+    .testimony_content p {
+        width: 100%;
+    }
+}
+/* =====================small screen============= */
+@media (min-width:576px) and (max-width:767.99px) {
+    .section_header p {
+        
+        width: 100%;
+    }
+    .about_image {
+        height: 230px;
+        margin: 30px 0 40px;
+    }
+    #counter .counter_wrapper {
+        padding-bottom: 0;
+    }
+    .counter_item {
+        padding-bottom: 40px;
+    }
+
+    .choose_us_item_wrapper .choose_us_image {
+        height: 373px;
+    }
+
+    .testimony_content p {
+        width: 100%;
+    }
+}
+/* =====================medium screen============= */
+@media (min-width:768px) and (max-width:991.99px) {
+    .about_image {
+        height: 263px;
+        /* margin: 30px 0 40px; */
+    }
+}
 

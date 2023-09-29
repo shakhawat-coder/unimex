@@ -44,3 +44,14 @@
     
 }
 
+/* ===============responsive================== */
+/* =================Extra small device========= */
+#error {
+    padding: 0 0 40px 0;
+}
+@media (max-width:575.99px) {
+    #error .error_image{
+        height: 300px;
+        width: 305px;
+    }
+}
