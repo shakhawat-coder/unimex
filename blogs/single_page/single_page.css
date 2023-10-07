@@ -17,7 +17,6 @@
     background: #fff;
     margin-right: 120px;
     padding-left: 140px;
-    /* padding-right: 80px; */
 }
 .single_blog .head-article {
     margin-bottom: 30px;
@@ -30,6 +29,7 @@
 }
 .single_blog .head-article .wrap-date {
     display: inline-flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
@@ -107,6 +107,7 @@
 .main_content .tags .title .tag-area {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
 }
 .main_content .tags .title .tag-area span {
     font-size: 15px;
@@ -250,4 +251,65 @@
 .main_content .list_comment .group_button .submit:hover {
     background: var(--color-btn-hover);
     color: var(--color-btn-text_hover);
+}
+
+/* =================Extra small device========= */
+@media (max-width:575.99px) {
+    .banner_img{
+        height: 50vh;
+    }
+    .single_blog .content_blog {
+        margin-bottom: 30px;
+        padding-top: 30px;
+        margin-right: 0px;
+        padding-left: 0;
+    }
+    .single_blog .head-article h3 a {
+        font-size: 25px;
+    }
+    .custom-css {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+}
+/* =====================small screen============= */
+@media (min-width:576px) and (max-width:767.99px) {
+    .banner_img{
+        height: 60vh;
+    }
+    .single_blog .content_blog {
+        margin-bottom: 30px;
+        padding-top: 30px;
+        margin-right: 0px;
+        padding-left: 0;
+    }
+    .single_blog .head-article h3 a {
+        font-size: 25px;
+    }
+    .custom-css {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+}
+/* =====================medium screen============= */
+@media (min-width:768px) and (max-width:991.99px) {
+    .banner_img{
+        height: 80vh;
+    }
+    .single_blog .content_blog {
+        margin-bottom: 30px;
+        padding-top: 30px;
+        margin-right: 0px;
+        padding-left: 0;
+    }
+    .single_blog .head-article h3 a {
+        font-size: 25px;
+    }
+    .custom-css {
+        width: 100%;
+        height: auto;
+        /* padding: 10px; */
+    }
 }
