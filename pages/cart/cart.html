@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unimex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../css/slick.min.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="./cart.css" />
+</head>
+
+<body id="top">
+    <header class="navbar top_navbar navbar-expand-lg">
+        <div class="container">
+            <div class="logo col-md-3 order-2 order-lg-1">
+                <a href="/"><img src="../../images/logo.avif" alt="" /></a>
+            </div>
+            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-2" id="navbarToggler">
+                <div class="search-bar p-0 mx-auto order-lg-2 d-none d-lg-block">
+                    <div class="header-search">
+                        <div class="laber_mini_cart">
+                            <div class="mini_cart_wrap laber_search">
+                                <form action="/search" method="post"
+                                    class="search_header mini_search_frm pr js_frm_search" role="search">
+                                    <div class="row">
+                                        <div class="search_catagory col-auto">
+                                            <select name="product_type">
+                                                <option value="*">All Categories</option>
+                                                <option value="Accessories">Accessories</option>
+                                                <option value="Basketball">Basketball</option>
+                                                <option value="Computer">Computer</option>
+                                                <option value="Computer &amp; Desktop">
+                                                    Computer &amp; Desktop
+                                                </option>
+                                                <option value="Dining &amp; Kitchen">
+                                                    Dining &amp; Kitchen
+                                                </option>
+                                                <option value="Fresh Vegetables">
+                                                    Fresh Vegetables
+                                                </option>
+                                                <option value="Laptop">Laptop</option>
+                                                <option value="Laptop &amp; Ipad">
+                                                    Laptop &amp; Ipad
+                                                </option>
+                                                <option value="Living Room">Living Room</option>
+                                                <option value="Logitech">Logitech</option>
+                                                <option value="Sectional Sofas">
+                                                    Sectional Sofas
+                                                </option>
+                                                <option value="Shoes">Shoes</option>
+                                                <option value="Smart Phones &amp; Tablets">
+                                                    Smart Phones &amp; Tablets
+                                                </option>
+                                                <option value="Snack &amp; Beverage">
+                                                    Snack &amp; Beverage
+                                                </option>
+                                                <option value="T-Shirt">T-Shirt</option>
+                                                <option value="Watches">Watches</option>
+                                                <option value="Watches &amp; Eyewear">
+                                                    Watches &amp; Eyewear
+                                                </option>
+                                                <option value="Wireless">Wireless</option>
+                                                <option value="Women’s">Women’s</option>
+                                            </select>
+                                        </div>
+                                        <div class="frm_search_input col">
+                                            <input class="search_header_input" autocomplete="off" type="text" name="q"
+                                                placeholder="Search for products ..." />
+                                        </div>
+                                        <div class="col-auto btn_search">
+                                            <button class="search_header_submit js_btn_search btn btn-primary"
+                                                aria-label="Search">
+                                                <span>Search</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 order-lg-3">
+                    <ul class="header-control d-flex align-items-center">
+                        <li class="signin item-list">
+                            <a href="/account/login" data-id="#login_pupop"
+                                class="d-flex align-items-center push_side header-icon" title="Login">
+                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
+                                        fill="#212529"></path>
+                                    <path
+                                        d="M11.4996 13.8C13.3079 13.8003 15.044 13.0842 16.3345 11.8057C17.6249 10.5272 18.3665 8.78854 18.3996 6.96384C18.3996 5.11691 17.6726 3.34563 16.3786 2.03966C15.0846 0.733688 13.3296 0 11.4996 0C9.66962 0 7.91457 0.733688 6.62057 2.03966C5.32657 3.34563 4.59961 5.11691 4.59961 6.96384C4.63276 8.78854 5.37433 10.5272 6.66476 11.8057C7.95518 13.0842 9.69132 13.8003 11.4996 13.8ZM6.89961 6.96384C6.89961 5.73255 7.38425 4.5517 8.24692 3.68105C9.10959 2.8104 10.2796 2.32128 11.4996 2.32128C12.7196 2.32128 13.8896 2.8104 14.7523 3.68105C15.615 4.5517 16.0996 5.73255 16.0996 6.96384C16.0996 8.19512 15.615 9.37597 14.7523 10.2466C13.8896 11.1173 12.7196 11.6064 11.4996 11.6064C10.2796 11.6064 9.10959 11.1173 8.24692 10.2466C7.38425 9.37597 6.89961 8.19512 6.89961 6.96384Z"
+                                        fill="#212529"></path>
+                                </svg>
+                                <div class="d-none d-xl-block">
+                                    <span class="text">Login</span><br />
+                                    <span class="b">Account</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="laber-wishlist d-none d-lg-block">
+                            <a data-id="#wishlist_popup" href="#" class="push_side header-icon" title="Wishlist">
+                                <svg width="28" height="23" viewBox="0 0 28 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
+                                        fill="#212529"></path>
+                                </svg>
+
+                                <span class="header_counter" data-js-wishlist-count="0">0</span>
+                            </a>
+                        </li>
+                        <li class="laber-compare hide-mobile" style="display: none">
+                            <a href="#" class="push_side header-icon" data-js-popup-button="compare-full"
+                                title="Compare">
+                                <i class="icon-layers" aria-hidden="true"></i>
+                                <span class="header_counter" data-js-compare-count="0">0</span>
+                            </a>
+                        </li>
+                        <li class="box-minicart">
+                            <div class="minicart">
+                                <div class="d-flex align-items-center cart-block box-has-content">
+                                    <a href="/cart" class="push_side header-icon" data-id="#js_cart_popup"
+                                        title="Your Cart">
+                                        <svg width="27" height="23" viewBox="0 0 27 23" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
+                                                fill="#212529"></path>
+                                            <path
+                                                d="M11.5425 20.7212C11.2472 20.7212 10.9639 20.6036 10.7551 20.3944C10.5463 20.1852 10.4289 19.9014 10.4289 19.6055H8.19141C8.19141 20.0457 8.27794 20.4816 8.44607 20.8882C8.6142 21.2949 8.86062 21.6644 9.17128 21.9757C9.48194 22.287 9.85075 22.5339 10.2566 22.7023C10.6625 22.8708 11.0976 22.9575 11.5369 22.9575C11.9763 22.9575 12.4113 22.8708 12.8172 22.7023C13.2231 22.5339 13.5919 22.287 13.9025 21.9757C14.2132 21.6644 14.4596 21.2949 14.6278 20.8882C14.7959 20.4816 14.8824 20.0457 14.8824 19.6055H12.6553C12.6553 19.9013 12.5381 20.185 12.3294 20.3942C12.1207 20.6034 11.8377 20.721 11.5425 20.7212Z"
+                                                fill="#212529"></path>
+                                            <path
+                                                d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
+                                                fill="#212529"></path>
+                                        </svg>
+                                        <span class="header_counter js-cart-count" data-js-cart-count="0">0</span>
+                                    </a>
+                                    <span data-total-price="" class="total-price">
+                                        <span class="text">Your Cart </span><br />
+                                        <span class="js-total-price">
+                                            <span class="money" data-currency-="$0.00">$0.00</span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="box-minicart d-block d-lg-none order-3">
+                <li>
+                    <div class="minicart">
+                        <div class="d-flex align-items-center cart-block box-has-content">
+                            <a href="/cart" class="push_side header-icon" data-id="#js_cart_popup" title="Your Cart">
+                                <svg width="27" height="23" viewBox="0 0 27 23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
+                                        fill="#212529"></path>
+                                    <path
+                                        d="M11.5425 20.7212C11.2472 20.7212 10.9639 20.6036 10.7551 20.3944C10.5463 20.1852 10.4289 19.9014 10.4289 19.6055H8.19141C8.19141 20.0457 8.27794 20.4816 8.44607 20.8882C8.6142 21.2949 8.86062 21.6644 9.17128 21.9757C9.48194 22.287 9.85075 22.5339 10.2566 22.7023C10.6625 22.8708 11.0976 22.9575 11.5369 22.9575C11.9763 22.9575 12.4113 22.8708 12.8172 22.7023C13.2231 22.5339 13.5919 22.287 13.9025 21.9757C14.2132 21.6644 14.4596 21.2949 14.6278 20.8882C14.7959 20.4816 14.8824 20.0457 14.8824 19.6055H12.6553C12.6553 19.9013 12.5381 20.185 12.3294 20.3942C12.1207 20.6034 11.8377 20.721 11.5425 20.7212Z"
+                                        fill="#212529"></path>
+                                    <path
+                                        d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
+                                        fill="#212529"></path>
+                                </svg>
+
+                                <span class="header_counter js-cart-count" data-js-cart-count="0">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="search-bar pt-4 col-12 d-block d-lg-none order-4">
+                <div class="header-search">
+                    <div class="laber_mini_cart">
+                        <div class="mini_cart_wrap laber_search">
+                            <form action="/search" method="post" class="search_header mini_search_frm pr js_frm_search"
+                                role="search">
+                                <div class="row">
+                                    <div class="frm_search_input col">
+                                        <input class="search_header_input" autocomplete="off" type="text" name="q"
+                                            placeholder="Search for products ..." />
+                                    </div>
+                                    <div class="col-auto btn_search">
+                                        <button class="search_header_submit js_btn_search btn btn-primary"
+                                            aria-label="Search">
+                                            <span>Search</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar main_navbar navbar-expand-lg d-none d-lg-block">
+        <div class="container">
+            <div class="vertical_menu">
+                <div class="vartical_menu_title d-flex">
+                    <span><i class="fas fa-bars"></i> </span>
+                    <span>Browse All Categories</span>
+                </div>
+                <div class="vertical_menu_list">
+                    <ul>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Computer &amp; Desktop</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Laptop &amp; Ipad</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Cameras &amp; Photos</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Smart Phones &amp; Tablets</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Home &amp;Kitchen</a>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Tv &amp; Audio</a>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Health &amp; Beauty</a>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Watches &amp; Eyewear</a>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Top Deals</a>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Top Selling Products</a>
+                        </li>
+                        <li>
+                            <a class="vertical_menu_item" href="#">Top Featured Products</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Shop
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../product/product.html"> Products </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu pages">
+                            <div class="" data-aos="fade-up"></div>
+                            <li>
+                                <a class="dropdown-item" href="../about/about.html">About Us</a>
+                            </li>
+                            <li><a class="dropdown-item" href="./faqs.html">FAQs</a></li>
+                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li>
+                                <a class="dropdown-item" href="../notfound/notfound.html">Page 404</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Blog
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">Design <span>(00)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Events <span>(00)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Inspiration <span>(03)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Links & Quates <span>(00)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">News <span>(03)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Social <span>(03)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="../../blogs/technology/technology.html">Technology
+                                    <span>(15)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Tips & Tricks <span>(04)</span></a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Uncatagorisd <span>(00)</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../contact/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="custom_html d-flex align-items-center column-gap-2">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.08737 14.2867L1.48898 12.6883C0.837006 12.0363 0.837006 10.9637 1.48898 10.3117L3.08737 8.71331C3.36078 8.4399 3.58161 7.90359 3.58161 7.52502V5.26411C3.58161 4.33872 4.33875 3.58161 5.26414 3.58161H7.52502C7.90359 3.58161 8.4399 3.36081 8.71331 3.0874L10.3117 1.48898C10.9637 0.837006 12.0363 0.837006 12.6883 1.48898L14.2867 3.0874C14.5601 3.36081 15.0964 3.58161 15.4749 3.58161H17.7359C18.6612 3.58161 19.4184 4.33872 19.4184 5.26411V7.52502C19.4184 7.90359 19.6392 8.4399 19.9126 8.71331L21.511 10.3117C22.163 10.9637 22.163 12.0363 21.511 12.6883L19.9126 14.2867C19.6392 14.5601 19.4184 15.0964 19.4184 15.475V17.7358C19.4184 18.6612 18.6612 19.4184 17.7359 19.4184H15.4749C15.0964 19.4184 14.5601 19.6392 14.2867 19.9126L12.6883 21.511C12.0363 22.163 10.9637 22.163 10.3117 21.511L8.71331 19.9126C8.4399 19.6392 7.90359 19.4184 7.52502 19.4184H5.26414C4.33875 19.4184 3.58161 18.6612 3.58161 17.7358V15.475C3.58161 15.0859 3.36078 14.5496 3.08737 14.2867Z"
+                            fill="#DD3842" stroke="#DD3842" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M8 15.0909L15.0909 8" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M14.4937 14.5H14.5043" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M8.58442 8.59091H8.59503" stroke="white" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                    <p class="m-0"><a href="#">Sale $20 Off Your First Order.</a></p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- =================breadcrumb section======================  -->
+    <div id="breadcrumb" aria-label="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb_wrapper text-center">
+                <h2>Your Cart</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Your Cart</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- ====================cart body section================== -->
+    <section id="cart">
+        <div class="shoppingcart-content">
+            <div class="container wrap-cart">
+                <form action="#" method="post" class="cart">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 pe-lg-3 cart-left">
+                            <div class="cart-content">
+                                <table class="shopping-cart-content">
+                                    <tbody>
+                                        <tr class="title">
+                                            <td class="product-name">
+                                                <div class="h3">Product</div>
+                                            </td>
+                                            <td class="quantity-item">
+                                                <div class="h3">Quantity</div>
+                                            </td>
+                                            <td class="total">
+                                                <div class="h3">Subtotal:</div>
+                                            </td>
+                                            <td class="delete-item">
+                                                <div></div>
+                                            </td>
+                                        </tr>
+                                        <tr class="product-item each-item">
+                                            <td class="product-name">
+                                                <div class="wrap_item_cart">
+                                                    <a class="product-thumb img" href="#">
+                                                        <img width="150"
+                                                            alt="Laptop Dell Vostro 3400 Intel Core i3 - 256GB"
+                                                            src="//demo-uminex.myshopify.com/cdn/shop/products/products_14_1_grande.jpg?v=1672302856">
+                                                    </a>
+                                                    <div class="wrap_title_cart">
+                                                        <a href="#" class="produpr-name">Laptop Dell Vostro 3400 Intel
+                                                            Core i3 - 256GB</a>
+                                                        <dl></dl>
+                                                        <p class="product-option"></p>
+                                                        <div class="price" data-title="Price">
+                                                            <div class="cart_price">$848.00
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="quantity-item">
+                                                <div class="quantity-cart">
+                                                    <div class="d-flex group-quantity-button">
+                                                        <a class="minus js_minus" href="javascript:void(0);">
+                                                            <svg width="20" height="20" viewBox="0 0 32 32"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g>
+                                                                    <path
+                                                                        d="M 9,18l 16,0 C 25.552,18, 26,17.552, 26,17C 26,16.448, 25.552,16, 25,16l-16,0 C 8.448,16, 8,16.448, 8,17 C 8,17.552, 8.448,18, 9,18z">
+                                                                    </path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <input id="updates_44077572194589" data-min="1" data-max="10"
+                                                            class="input-text qty js_qty" type="text" size="4"
+                                                            title="Qty" name="updates[]" value="01">
+                                                        <a class="plus js_plus" href="javascript:void(0);">
+                                                            <svg width="20" height="20" viewBox="0 0 32 32"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g>
+                                                                    <path
+                                                                        d="M 9,18L 16,18 l0,7 C 16,25.552, 16.448,26, 17,26S 18,25.552, 18,25L 18,18 l 7,0 C 25.552,18, 26,17.552, 26,17 C 26,16.448, 25.552,16, 25,16L 18,16 L 18,9 C 18,8.448, 17.552,8, 17,8S 16,8.448, 16,9L 16,16 L 9,16 C 8.448,16, 8,16.448, 8,17C 8,17.552, 8.448,18, 9,18z">
+                                                                    </path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="alo-discount"></div>
+                                            </td>
+                                            <td class="total">$848.00</td>
+                                            <td class="delete-item">
+                                                <a class="alo_tooltip js-remove-item" data-id="44077572194589"
+                                                    href="/cart/change?line=1&amp;quantity=0">
+                                                    <i class="icondelete icon-trash-2"></i>
+
+                                                    <span><i class="fa-solid fa-trash-can"></i></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr class="checkout-cart group-button d-none d-md-block">
+                                            <td colspan="6">
+                                                <div class="left">
+                                                    <a class="cart_btn" href="#">
+                                                        <span>Continue shopping</span>
+                                                    </a>
+                                                </div>
+                                                <div class="right">
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="add-order-note">
+                                <h3 class="title">Add Order Note</h3>
+                                <textarea name="note" class="cart-note__input"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 ps-lg-5 cart-right">
+                            <div class="content cart-total">
+                                <div class="free-shipping">
+                                    <div class="free-shipping__progress" style="width: 100%;">
+                                        <div class="icon-free-shipping">
+                                            <svg width="20" height="14" viewBox="0 0 20 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M18.8015 6.61104L17.711 5.59952C17.6367 5.53058 17.5796 5.44506 17.5446 5.34991L16.6882 3.0245C16.5657 2.69678 16.3463 2.41417 16.0591 2.21432C15.772 2.01448 15.4307 1.90691 15.0809 1.90594H13.7833V1.54193C13.7833 1.38539 13.7212 1.23526 13.6105 1.12457C13.4998 1.01388 13.3496 0.951691 13.1931 0.951691H5.35161C5.23493 0.950317 5.12232 0.9945 5.03771 1.07485C4.9531 1.1552 4.90316 1.26538 4.89851 1.38197C4.89743 1.44025 4.90796 1.49816 4.92951 1.55232C4.95106 1.60648 4.98319 1.65581 5.02402 1.69741C5.06485 1.73901 5.11356 1.77206 5.16731 1.79462C5.22106 1.81718 5.27876 1.8288 5.33705 1.8288H12.9062V5.63436C12.9062 5.7909 12.9684 5.94103 13.0791 6.05172C13.1898 6.16242 13.3399 6.2246 13.4964 6.2246H17.061L18.1197 7.17734V10.7313H17.1599C17.0643 10.3131 16.8296 9.93972 16.4942 9.6723C16.1587 9.40487 15.7424 9.25924 15.3134 9.25924C14.8845 9.25924 14.4682 9.40487 14.1327 9.6723C13.7973 9.93972 13.5626 10.3131 13.467 10.7313H10.5136C10.4181 10.3131 10.1833 9.93972 9.84791 9.6723C9.51247 9.40487 9.09619 9.25924 8.66719 9.25924C8.2382 9.25924 7.82191 9.40487 7.48648 9.6723C7.15104 9.93972 6.91633 10.3131 6.82075 10.7313H5.35157C5.23488 10.7299 5.12226 10.7741 5.03765 10.8545C4.95305 10.9349 4.90313 11.0451 4.89851 11.1617C4.89743 11.22 4.90796 11.2779 4.92951 11.332C4.95106 11.3862 4.98319 11.4355 5.02402 11.4771C5.06485 11.5187 5.11357 11.5518 5.16731 11.5743C5.22106 11.5969 5.27876 11.6085 5.33705 11.6085H6.82814C6.92972 12.0194 7.16602 12.3845 7.49933 12.6455C7.83265 12.9064 8.24376 13.0482 8.66707 13.0482C9.09038 13.0482 9.5015 12.9064 9.83481 12.6455C10.1681 12.3845 10.4044 12.0194 10.506 11.6085H13.4745C13.576 12.0194 13.8123 12.3845 14.1457 12.6455C14.479 12.9064 14.8901 13.0482 15.3134 13.0482C15.7367 13.0482 16.1478 12.9064 16.4811 12.6455C16.8144 12.3845 17.0507 12.0194 17.1523 11.6085H18.4066C18.5631 11.6085 18.7133 11.5463 18.824 11.4356C18.9346 11.325 18.9968 11.1748 18.9968 11.0183V7.04972C18.9968 6.967 18.9794 6.88521 18.9457 6.80965C18.9121 6.73409 18.8629 6.66642 18.8015 6.61104ZM13.7833 5.34759V2.78302H15.0809C15.2517 2.78348 15.4183 2.836 15.5585 2.93358C15.6987 3.03116 15.8059 3.16915 15.8656 3.32917L16.6132 5.34759H13.7833ZM8.66709 12.171C8.46588 12.171 8.26919 12.1113 8.10189 11.9995C7.9346 11.8877 7.8042 11.7288 7.72721 11.543C7.65021 11.3571 7.63007 11.1525 7.66932 10.9552C7.70858 10.7578 7.80547 10.5766 7.94775 10.4343C8.09003 10.292 8.2713 10.1951 8.46864 10.1559C8.66598 10.1166 8.87053 10.1368 9.05642 10.2138C9.24231 10.2908 9.40119 10.4212 9.51297 10.5885C9.62475 10.7558 9.68441 10.9525 9.68441 11.1537C9.6841 11.4234 9.57682 11.682 9.3861 11.8727C9.19538 12.0634 8.9368 12.1707 8.66709 12.171ZM15.3134 12.171C15.1122 12.171 14.9155 12.1113 14.7482 11.9995C14.5809 11.8877 14.4505 11.7289 14.3735 11.543C14.2965 11.3571 14.2764 11.1525 14.3156 10.9552C14.3549 10.7578 14.4518 10.5766 14.594 10.4343C14.7363 10.292 14.9176 10.1951 15.1149 10.1559C15.3123 10.1166 15.5168 10.1368 15.7027 10.2138C15.8886 10.2908 16.0475 10.4212 16.1593 10.5885C16.271 10.7558 16.3307 10.9525 16.3307 11.1537C16.3304 11.4234 16.2231 11.682 16.0324 11.8727C15.8417 12.0634 15.5831 12.1707 15.3134 12.171Z"
+                                                    fill="#fff" stroke="#fff" stroke-width="0.3"></path>
+                                                <path
+                                                    d="M3.46986 4.28249H8.44355C8.55988 4.28249 8.67144 4.23628 8.7537 4.15403C8.83595 4.07177 8.88216 3.96021 8.88216 3.84388C8.88216 3.72756 8.83595 3.61599 8.7537 3.53374C8.67144 3.45148 8.55988 3.40527 8.44355 3.40527H3.46986C3.35353 3.40527 3.24197 3.45148 3.15972 3.53374C3.07746 3.61599 3.03125 3.72756 3.03125 3.84388C3.03125 3.96021 3.07746 4.07177 3.15972 4.15403C3.24197 4.23628 3.35353 4.28249 3.46986 4.28249Z"
+                                                    fill="#fff" stroke="#fff" stroke-width="0.3"></path>
+                                                <path
+                                                    d="M8.87579 6.27994C8.87579 6.16361 8.82958 6.05205 8.74732 5.96979C8.66507 5.88754 8.55351 5.84133 8.43718 5.84133H1.43472C1.3768 5.84081 1.31934 5.85177 1.26567 5.87358C1.21201 5.89539 1.16319 5.92761 1.12204 5.96839C1.0809 6.00917 1.04824 6.05769 1.02595 6.11116C1.00366 6.16463 0.992188 6.22199 0.992188 6.27992C0.992188 6.33785 1.00366 6.3952 1.02595 6.44867C1.04824 6.50214 1.0809 6.55067 1.12204 6.59145C1.16319 6.63223 1.21201 6.66445 1.26567 6.68626C1.31934 6.70807 1.3768 6.71903 1.43472 6.71851H8.43718C8.5535 6.71851 8.66506 6.6723 8.74731 6.59006C8.82957 6.50781 8.87578 6.39626 8.87579 6.27994Z"
+                                                    fill="#fff" stroke="#fff" stroke-width="0.3"></path>
+                                                <path
+                                                    d="M6.10138 8.71641C6.10138 8.65881 6.09003 8.60178 6.06799 8.54857C6.04595 8.49536 6.01365 8.44701 5.97292 8.40629C5.9322 8.36556 5.88385 8.33326 5.83064 8.31122C5.77743 8.28918 5.7204 8.27783 5.6628 8.27783H2.61437C2.49873 8.27887 2.38818 8.32553 2.30677 8.40767C2.22536 8.48981 2.17969 8.60078 2.17969 8.71642C2.17969 8.83207 2.22536 8.94304 2.30677 9.02518C2.38818 9.10732 2.49873 9.15398 2.61437 9.15502H5.6628C5.77912 9.15501 5.89068 9.10879 5.97292 9.02654C6.05517 8.94428 6.10138 8.83273 6.10138 8.71641Z"
+                                                    fill="#fff" stroke="#fff" stroke-width="0.3"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="free-shipping__text ">
+                                        <div class="text">
+                                            <span data-js-text="">Congratulations! You've got <span class="free">Free
+                                                    Shipping!</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h5 class="title h3 cart_total">Cart totals</h5>
+
+                                <div class="info-checkout info-subtotal d-flex flex-row">
+                                    <span class="text">Subtotal </span><span class="item subtotal">$848.00</span>
+                                </div>
+                                <div id="shipping-calculator" class="info-checkout">
+                                    <h5 class="title">
+                                        <span>Estimate shipping rates:</span>
+                                    </h5>
+                                    <div class="shopping-cart-element-content">
+                                        <p class="field form-row form-row-wide select">
+                                            <label for="address_country">Country</label>
+                                            <select id="address_country" style="width: 100%;" name="country]">
+                                                <option value="Afghanistan">Afghanistan</option>
+                                                <option value="Aland Islands">Åland Islands
+                                                </option>
+                                                <option value="Albania">Albania</option>
+                                                <option value="Algeria">Algeria</option>
+                                                <option value="Andorra">Andorra</option>
+                                                <option value="Angola">Angola</option>
+                                                <option value="Anguilla">Anguilla</option>
+                                                <option value="Antigua And Barbuda">Antigua & Barbuda</option>
+                                                <option value="Argentina">Argentina</option>
+                                                <option value="Armenia">Armenia</option>
+                                                <option value="Aruba">Aruba</option>
+                                                <option value="Ascension Island">Ascension Island</option>
+                                                <option value="Australia">Australia</option>
+                                                <option value="Austria">Austria</option>
+                                                <option value="Azerbaijan">Azerbaijan</option>
+                                                <option value="Bahamas">Bahamas</option>
+                                                <option value="Bahrain">Bahrain</option>
+                                                <option value="Bangladesh">Bangladesh</option>
+                                                <option value="Barbados">Barbados</option>
+                                                <option value="Belarus">Belarus</option>
+                                                <option value="Belgium">Belgium</option>
+                                                <option value="Belize">Belize</option>
+                                                <option value="Benin">Benin</option>
+                                                <option value="Bermuda">Bermuda</option>
+                                                <option value="Bhutan">Bhutan</option>
+                                                <option value="Bolivia">Bolivia</option>
+                                                <option value="Bosnia And Herzegovina">Bosnia & Herzegovina</option>
+                                                <option value="Botswana">Botswana</option>
+                                                <option value="Brazil">Brazil</option>
+                                                <option value="British Indian Ocean Territory">
+                                                    British Indian Ocean Territory</option>
+                                                <option value="Virgin Islands, British">British
+                                                    Virgin Islands</option>
+                                                <option value="Brunei">Brunei</option>
+                                                <option value="Bulgaria">Bulgaria</option>
+                                                <option value="Burkina Faso">Burkina Faso
+                                                </option>
+                                                <option value="Burundi">Burundi</option>
+                                                <option value="Cambodia">Cambodia</option>
+                                                <option value="Republic of Cameroon">Cameroon
+                                                </option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Cape Verde">Cape Verde</option>
+                                                <option value="Caribbean Netherlands">Caribbean
+                                                    Netherlands</option>
+                                                <option value="Cayman Islands">Cayman Islands
+                                                </option>
+                                                <option value="Central African Republic">Central
+                                                    African Republic</option>
+                                                <option value="Chad">Chad</option>
+                                                <option value="Chile">Chile</option>
+                                                <option value="China">China</option>
+                                                <option value="Christmas Island">Christmas
+                                                    Island</option>
+                                                <option value="Cocos (Keeling) Islands">Cocos
+                                                    (Keeling) Islands</option>
+                                                <option value="Colombia">Colombia</option>
+                                                <option value="Comoros">Comoros</option>
+                                                <option value="Congo">Congo - Brazzaville
+                                                </option>
+                                                <option value="Congo, The Democratic Republic Of The">Congo - Kinshasa
+                                                </option>
+                                                <option value="Cook Islands">Cook Islands
+                                                </option>
+                                                <option value="Costa Rica">Costa Rica</option>
+                                                <option value="Croatia">Croatia</option>
+                                                <option value="Curaçao">Curaçao</option>
+                                                <option value="Cyprus">Cyprus</option>
+                                                <option value="Czech Republic">Czechia</option>
+                                                <option value="Côte d'Ivoire">Côte d’Ivoire
+                                                </option>
+                                                <option value="Denmark">Denmark</option>
+                                                <option value="Djibouti">Djibouti</option>
+                                                <option value="Dominica">Dominica</option>
+                                                <option value="Dominican Republic">Dominican
+                                                    Republic</option>
+                                                <option value="Ecuador">Ecuador</option>
+                                                <option value="Egypt">Egypt</option>
+                                                <option value="El Salvador">El Salvador</option>
+                                                <option value="Equatorial Guinea">Equatorial
+                                                    Guinea</option>
+                                                <option value="Eritrea">Eritrea</option>
+                                                <option value="Estonia">Estonia</option>
+                                                <option value="Eswatini">Eswatini</option>
+                                                <option value="Ethiopia">Ethiopia</option>
+                                                <option value="Falkland Islands (Malvinas)">
+                                                    Falkland Islands</option>
+                                                <option value="Faroe Islands">Faroe Islands
+                                                </option>
+                                                <option value="Fiji">Fiji</option>
+                                                <option value="Finland">Finland</option>
+                                                <option value="France">France</option>
+                                                <option value="French Guiana">French Guiana
+                                                </option>
+                                                <option value="French Polynesia">French
+                                                    Polynesia</option>
+                                                <option value="French Southern Territories">
+                                                    French Southern Territories</option>
+                                                <option value="Gabon">Gabon</option>
+                                                <option value="Gambia">Gambia</option>
+                                                <option value="Georgia">Georgia</option>
+                                                <option value="Germany">Germany</option>
+                                                <option value="Ghana">Ghana</option>
+                                                <option value="Gibraltar">Gibraltar</option>
+                                                <option value="Greece">Greece</option>
+                                                <option value="Greenland">Greenland</option>
+                                                <option value="Grenada">Grenada</option>
+                                                <option value="Guadeloupe">Guadeloupe</option>
+                                                <option value="Guatemala">Guatemala</option>
+                                                <option value="Guernsey">Guernsey</option>
+                                                <option value="Guinea">Guinea</option>
+                                                <option value="Guinea Bissau">Guinea-Bissau
+                                                </option>
+                                                <option value="Guyana">Guyana</option>
+                                                <option value="Haiti">Haiti</option>
+                                                <option value="Honduras">Honduras</option>
+                                                <option value="Hong Kong">Hong Kong SAR</option>
+                                                <option value="Hungary">Hungary</option>
+                                                <option value="Iceland">Iceland</option>
+                                                <option value="India">India</option>
+                                                <option value="Indonesia">Indonesia</option>
+                                                <option value="Iraq">Iraq</option>
+                                                <option value="Ireland">Ireland</option>
+                                                <option value="Isle Of Man">Isle of Man</option>
+                                                <option value="Israel">Israel</option>
+                                                <option value="Italy">Italy</option>
+                                                <option value="Jamaica">Jamaica</option>
+                                                <option value="Japan">Japan</option>
+                                                <option value="Jersey">Jersey</option>
+                                                <option value="Jordan">Jordan</option>
+                                                <option value="Kazakhstan">Kazakhstan</option>
+                                                <option value="Kenya">Kenya</option>
+                                                <option value="Kiribati">Kiribati</option>
+                                                <option value="Kosovo">Kosovo</option>
+                                                <option value="Kuwait">Kuwait</option>
+                                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                <option value="Lao People's Democratic Republic">
+                                                    Laos</option>
+                                                <option value="Latvia">Latvia</option>
+                                                <option value="Lebanon">Lebanon</option>
+                                                <option value="Lesotho">Lesotho</option>
+                                                <option value="Liberia">Liberia</option>
+                                                <option value="Libyan Arab Jamahiriya">Libya
+                                                </option>
+                                                <option value="Liechtenstein">Liechtenstein
+                                                </option>
+                                                <option value="Lithuania">Lithuania</option>
+                                                <option value="Luxembourg">Luxembourg</option>
+                                                <option value="Macao">Macao SAR</option>
+                                                <option value="Madagascar">Madagascar</option>
+                                                <option value="Malawi">Malawi</option>
+                                                <option value="Malaysia">Malaysia</option>
+                                                <option value="Maldives">Maldives</option>
+                                                <option value="Mali">Mali</option>
+                                                <option value="Malta">Malta</option>
+                                                <option value="Martinique">Martinique</option>
+                                                <option value="Mauritania">Mauritania</option>
+                                                <option value="Mauritius">Mauritius</option>
+                                                <option value="Mayotte">Mayotte</option>
+                                                <option value="Mexico">Mexico</option>
+                                                <option value="Moldova, Republic of">Moldova
+                                                </option>
+                                                <option value="Monaco">Monaco</option>
+                                                <option value="Mongolia">Mongolia</option>
+                                                <option value="Montenegro">Montenegro</option>
+                                                <option value="Montserrat">Montserrat</option>
+                                                <option value="Morocco">Morocco</option>
+                                                <option value="Mozambique">Mozambique</option>
+                                                <option value="Myanmar">Myanmar (Burma)</option>
+                                                <option value="Namibia">Namibia</option>
+                                                <option value="Nauru">Nauru</option>
+                                                <option value="Nepal">Nepal</option>
+                                                <option value="Netherlands">Netherlands</option>
+                                                <option value="New Caledonia">New Caledonia
+                                                </option>
+                                                <option value="New Zealand">New Zealand</option>
+                                                <option value="Nicaragua">Nicaragua</option>
+                                                <option value="Niger">Niger</option>
+                                                <option value="Nigeria">Nigeria</option>
+                                                <option value="Niue">Niue</option>
+                                                <option value="Norfolk Island">Norfolk Island
+                                                </option>
+                                                <option value="North Macedonia">North Macedonia
+                                                </option>
+                                                <option value="Norway">Norway</option>
+                                                <option value="Oman">Oman</option>
+                                                <option value="Pakistan">Pakistan</option>
+                                                <option value="Palestinian Territory, Occupied">
+                                                    Palestinian Territories</option>
+                                                <option value="Panama">Panama</option>
+                                                <option value="Papua New Guinea">Papua New
+                                                    Guinea</option>
+                                                <option value="Paraguay">Paraguay</option>
+                                                <option value="Peru">Peru</option>
+                                                <option value="Philippines">Philippines</option>
+                                                <option value="Pitcairn">Pitcairn Islands
+                                                </option>
+                                                <option value="Poland">Poland</option>
+                                                <option value="Portugal">Portugal</option>
+                                                <option value="Qatar">Qatar</option>
+                                                <option value="Reunion">Réunion</option>
+                                                <option value="Romania">Romania</option>
+                                                <option value="Russia">Russia</option>
+                                                <option value="Rwanda">Rwanda</option>
+                                                <option value="Samoa">Samoa</option>
+                                                <option value="San Marino">San Marino</option>
+                                                <option value="Sao Tome And Principe">São Tomé
+                                                    &amp; Príncipe</option>
+                                                <option value="Saudi Arabia">Saudi Arabia
+                                                </option>
+                                                <option value="Senegal">Senegal</option>
+                                                <option value="Serbia">Serbia</option>
+                                                <option value="Seychelles">Seychelles</option>
+                                                <option value="Sierra Leone">Sierra Leone
+                                                </option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Sint Maarten">Sint Maarten
+                                                </option>
+                                                <option value="Slovakia">Slovakia</option>
+                                                <option value="Slovenia">Slovenia</option>
+                                                <option value="Solomon Islands">Solomon Islands
+                                                </option>
+                                                <option value="Somalia">Somalia</option>
+                                                <option value="South Africa">South Africa</option>
+                                                <option value="South Georgia And The South Sandwich Islands">South
+                                                    Georgia &amp; South Sandwich Islands
+                                                </option>
+                                                <option value="South Korea">South Korea</option>
+                                                <option value="South Sudan">South Sudan</option>
+                                                <option value="Spain">Spain</option>
+                                                <option value="Sri Lanka">Sri Lanka</option>
+                                                <option value="Saint Barthélemy">St. Barthélemy
+                                                </option>
+                                                <option value="Saint Helena">St. Helena</option>
+                                                <option value="Saint Kitts And Nevis">St. Kitts
+                                                    &amp; Nevis</option>
+                                                <option value="Saint Lucia">St. Lucia</option>
+                                                <option value="Saint Martin">St. Martin</option>
+                                                <option value="Saint Pierre And Miquelon">St.
+                                                    Pierre &amp; Miquelon</option>
+                                                <option value="St. Vincent">St. Vincent &amp;
+                                                    Grenadines</option>
+                                                <option value="Sudan">Sudan</option>
+                                                <option value="Suriname">Suriname</option>
+                                                <option value="Svalbard And Jan Mayen">Svalbard
+                                                    &amp; Jan Mayen</option>
+                                                <option value="Sweden">Sweden</option>
+                                                <option value="Switzerland">Switzerland</option>
+                                                <option value="Taiwan">Taiwan</option>
+                                                <option value="Tajikistan">Tajikistan</option>
+                                                <option value="Tanzania, United Republic Of">
+                                                    Tanzania</option>
+                                                <option value="Thailand">Thailand</option>
+                                                <option value="Timor Leste">Timor-Leste</option>
+                                                <option value="Togo">Togo</option>
+                                                <option value="Tokelau">Tokelau</option>
+                                                <option value="Tonga">Tonga</option>
+                                                <option value="Trinidad and Tobago">Trinidad
+                                                    &amp; Tobago</option>
+                                                <option value="Tristan da Cunha">Tristan da
+                                                    Cunha</option>
+                                                <option value="Tunisia">Tunisia</option>
+                                                <option value="Turkey">Turkey</option>
+                                                <option value="Turkmenistan">Turkmenistan
+                                                </option>
+                                                <option value="Turks and Caicos Islands">Turks
+                                                    &amp; Caicos Islands</option>
+                                                <option value="Tuvalu">Tuvalu</option>
+                                                <option value="United States Minor Outlying Islands">U.S. Outlying
+                                                    Islands</option>
+                                                <option value="Uganda">Uganda</option>
+                                                <option value="Ukraine">Ukraine</option>
+                                                <option value="United Arab Emirates">United Arab Emirates</option>
+                                                <option value="United Kingdom">United Kingdom</option>
+                                                <option value="United States">United States</option>
+                                                <option value="Uruguay">Uruguay</option>
+                                                <option value="Uzbekistan">Uzbekistan</option>
+                                                <option value="Vanuatu">Vanuatu</option>
+                                                <option value="Holy See (Vatican City State)">
+                                                    Vatican City</option>
+                                                <option value="Venezuela">Venezuela</option>
+                                                <option value="Vietnam">Vietnam</option>
+                                                <option value="Wallis And Futuna">Wallis &amp;
+                                                    Futuna</option>
+                                                <option value="Western Sahara">Western Sahara
+                                                </option>
+                                                <option value="Yemen">Yemen</option>
+                                                <option value="Zambia">Zambia</option>
+                                                <option value="Zimbabwe">Zimbabwe</option>
+                                            </select>
+                                        </p>
+                                        <p class="field form-row form-row-wide">
+                                            <label for="address_zip">Zip/Postal Code</label>
+                                            <input placeholder="Zip/Postal Code" type="text" style="width: 100%;"
+                                                id="address_zip" name="address[zip]">
+                                        </p>
+                                        <span id="wrapper-response"></span>
+                                        <p class="field last">
+                                            <button type="button"
+                                                class="cart_btn get-rates btn button button-duck">Calculate
+                                                shipping rates</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="info-checkout">
+                                    <h3 class="coupon-title">Coupon</h3>
+                                    <p>Coupon code will work on checkout page.</p>
+                                    <input type="text" name="discount" id="couponcode" value=""
+                                        placeholder="Coupon code">
+                                </div>
+                                <div class="info-checkout d-flex flex-row">
+                                    <span class="text">Order Totals </span><span class="item total">$848.00</span>
+                                </div>
+
+                                <div class="cart__shipping_note note hidden" data-shipping-note="">Taxes and
+                                    shipping calculated at checkout</div>
+                                <div class="group-button">
+
+                                    <button type="submit" data-confirm="ck_lumise" name="checkout"
+                                        class=" cart_btn btn btn_checkout button submit">
+                                        Check Out
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ================benefit section=========== -->
+    <section id="benefit">
+        <div class="container">
+            <div class="benefit_item_wrapper">
+                <div class="row justify-content-between row-gap-4">
+                    <div class="col-6 col-lg-2 text-center">
+                        <div class="benefit_logo">
+                            <svg width="21" height="26" viewBox="0 0 21 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.5999 19.6001L3.68862 24.6289C3.57111 24.78 3.67878 25.0001 3.87017 25.0001H5.70026C5.76383 25.0001 5.82457 24.9738 5.86805 24.9274L9.19548 21.3781C9.29873 21.268 9.4783 21.2855 9.55831 21.4136L11.7999 25.0001"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path
+                                    d="M18.062 18.443L17.6114 17.8434L18.062 18.443ZM1.01352 8.18184L0.264562 8.14229L1.01352 8.18184ZM1.69442 5.1529L2.38638 5.4422L1.69442 5.1529ZM2.56801 4.86425L2.18125 5.50683L2.56801 4.86425ZM20.0979 16.2296L19.4629 15.8305L20.0979 16.2296ZM19.8678 15.2767L20.2545 14.6341L19.8678 15.2767ZM16 2.8L16.7161 2.57696L16.5229 1.9567L15.8814 2.05944L16 2.8ZM18.8852 14.5846L19.1082 15.3006L20.5404 14.8546L20.3173 14.1385L18.8852 14.5846ZM10.7875 9.0787L10.3635 9.69735L11.6008 10.5454L12.0248 9.92671L10.7875 9.0787ZM15.1859 0.35688C14.8307 0.143769 14.37 0.258943 14.1569 0.614128C13.9438 0.969313 14.0589 1.43001 14.4141 1.64312L15.1859 0.35688ZM17.4141 3.44312C17.7693 3.65623 18.23 3.54106 18.4431 3.18587C18.6562 2.83069 18.5411 2.36999 18.1859 2.15688L17.4141 3.44312ZM3.11614 4.10384L2.37557 4.22245L2.61278 5.70357L3.35334 5.58497L3.11614 4.10384ZM19.4629 15.8305C18.9731 16.6098 18.3486 17.2894 17.6114 17.8434L18.5125 19.0426C19.3965 18.3783 20.1458 17.5627 20.7329 16.6288L19.4629 15.8305ZM17.6114 17.8434C16.7053 18.5244 15.6426 19.0052 14.4804 19.2542L14.7947 20.7209C16.1614 20.428 17.4259 19.8591 18.5125 19.0426L17.6114 17.8434ZM14.4804 19.2542C13.3177 19.5034 12.0771 19.5159 10.829 19.2849L10.556 20.7599C11.9879 21.0249 13.4284 21.0137 14.7947 20.7209L14.4804 19.2542ZM10.829 19.2849C9.58067 19.0539 8.35172 18.5842 7.21419 17.8995L6.44066 19.1847C7.72642 19.9585 9.12417 20.4949 10.556 20.7599L10.829 19.2849ZM7.21419 17.8995C6.07665 17.2148 5.05595 16.3305 4.21146 15.2974L3.0501 16.2467C4.00316 17.4126 5.1549 18.4108 6.44066 19.1847L7.21419 17.8995ZM4.21146 15.2974C3.36697 14.2643 2.71756 13.1056 2.29824 11.8895L0.880179 12.3785C1.359 13.7671 2.09705 15.0808 3.0501 16.2467L4.21146 15.2974ZM2.29824 11.8895C1.87895 10.6736 1.69883 9.4269 1.76248 8.22138L0.264562 8.14229C0.19021 9.55058 0.401331 10.9898 0.880179 12.3785L2.29824 11.8895ZM1.76248 8.22138C1.81424 7.24088 2.02638 6.30326 2.38638 5.4422L1.00246 4.8636C0.573671 5.88919 0.325061 6.99638 0.264562 8.14229L1.76248 8.22138ZM2.38638 5.4422C2.37682 5.46505 2.34674 5.50047 2.29723 5.51637C2.25047 5.53138 2.20689 5.52226 2.18125 5.50683L2.95477 4.22166C2.25196 3.79865 1.33231 4.07466 1.00246 4.8636L2.38638 5.4422ZM20.7329 16.6288C21.1689 15.9351 20.9199 15.0345 20.2545 14.6341L19.481 15.9193C19.4585 15.9057 19.4527 15.8902 19.4513 15.8845C19.4493 15.8765 19.4478 15.8545 19.4629 15.8305L20.7329 16.6288ZM2.18125 5.50683L19.481 15.9193L20.2545 14.6341L2.95477 4.22166L2.18125 5.50683ZM15.2839 3.02304L18.8852 14.5846L20.3173 14.1385L16.7161 2.57696L15.2839 3.02304ZM12.0248 9.92671L16.6186 3.224L15.3814 2.376L10.7875 9.0787L12.0248 9.92671ZM14.4141 1.64312L17.4141 3.44312L18.1859 2.15688L15.1859 0.35688L14.4141 1.64312ZM3.35334 5.58497L16.1186 3.54056L15.8814 2.05944L3.11614 4.10384L3.35334 5.58497Z"
+                                    fill="#2B38D1"></path>
+                            </svg>
+                        </div>
+                        <div class="benefit_content">
+                            <h4>FAST DELIVERY</h4>
+                            <p>Across West & East India</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 text-center">
+                        <div class="benefit_logo">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1 11.3125V6.25C1 4.86929 2.11929 3.75 3.5 3.75H5.8125H7.01562M20.25 7.53125V6.25C20.25 4.86929 19.1307 3.75 17.75 3.75H15.4375"
+                                    stroke="#2B38D1" stroke-width="1.5"></path>
+                                <path
+                                    d="M1 13.375H4.4375C5.57659 13.375 6.5 14.2984 6.5 15.4375V15.4375C6.5 16.5766 5.57659 17.5 4.4375 17.5H1V13.375Z"
+                                    stroke="#2B38D1" stroke-width="1.5"></path>
+                                <path
+                                    d="M5.125 7.1875L7.07354 1.34189C7.1416 1.13771 7.33266 1 7.54788 1H15.4621C15.7943 1 16.0342 1.31795 15.9429 1.63736L14.75 5.8125L14.0625 7.875"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path
+                                    d="M15.4375 23H3.8C2.2536 23 1 21.7464 1 20.2V10.675C1 9.1286 2.2536 7.875 3.8 7.875H20.2C21.7464 7.875 23 9.1286 23 10.675V20.2C23 21.7464 21.7464 23 20.2 23H16.8289H15.0437"
+                                    stroke="#2B38D1" stroke-width="1.5"></path>
+                            </svg>
+                        </div>
+                        <div class="benefit_content">
+                            <h4>SAFE PAYMENT</h4>
+                            <p>100% Secure Payment</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 text-center">
+                        <div class="benefit_logo">
+                            <svg width="22" height="26" viewBox="0 0 22 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.9136 11.1186C13.4987 11.1186 13.973 10.6444 13.973 10.0593C13.973 9.47427 13.4987 9 12.9136 9C12.3286 9 11.8543 9.47427 11.8543 10.0593C11.8543 10.6444 12.3286 11.1186 12.9136 11.1186ZM6.17723 9.33386C6.44463 9.01752 6.91784 8.97784 7.23418 9.24524L7.73982 9.67264C8.05616 9.94004 8.09583 10.4133 7.82843 10.7296C7.56104 11.0459 7.08782 11.0856 6.77148 10.8182L6.26585 10.3908C5.94951 10.1234 5.90983 9.6502 6.17723 9.33386ZM8.76861 11.5243C9.03601 11.208 9.50922 11.1683 9.82556 11.4357L10.0152 11.596L10.7736 12.2371L11.2793 12.6645L15.3243 16.0837C15.6407 16.3511 15.6803 16.8243 15.4129 17.1407C15.1455 17.457 14.6723 17.4967 14.356 17.2293L10.3109 13.8101L9.80529 13.3826L9.04684 12.7415L8.85722 12.5813C8.54088 12.3139 8.50121 11.8407 8.76861 11.5243ZM9.73569 16.4152C9.73569 17.0003 9.26141 17.4745 8.67637 17.4745C8.09132 17.4745 7.61705 17.0003 7.61705 16.4152C7.61705 15.8302 8.09132 15.3559 8.67637 15.3559C9.26141 15.3559 9.73569 15.8302 9.73569 16.4152Z"
+                                    fill="#2B38D1"></path>
+                                <path
+                                    d="M1 16.2498V7.44689C1 5.10711 2.96513 3.27467 5.2392 3.49391L6.34923 3.60093C7.29689 3.6923 8.20196 3.17777 8.62764 2.30566C9.47738 0.564779 11.9026 0.564779 12.7524 2.30566C13.178 3.17777 14.0831 3.6923 15.0308 3.60093L16.1408 3.49391C18.4149 3.27467 20.38 5.10712 20.38 7.44689V16.2498C20.38 17.4224 19.874 18.5351 18.9976 19.2895L13.1836 24.2942C11.7419 25.5353 9.63808 25.5353 8.1964 24.2942L2.3824 19.2895C1.50602 18.5351 1 17.4224 1 16.2498Z"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path
+                                    d="M1 7.44689C1 5.10711 2.96513 3.27467 5.2392 3.49391L6.34923 3.60093C7.29689 3.6923 8.20196 3.17777 8.62764 2.30566C9.47738 0.564779 11.9026 0.564779 12.7524 2.30566C13.178 3.17777 14.0831 3.6923 15.0308 3.60093L16.1408 3.49391C18.4149 3.27467 20.38 5.10712 20.38 7.44689"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="square"></path>
+                            </svg>
+                        </div>
+                        <div class="benefit_content">
+                            <h4>ONLINE DISCOUNT</h4>
+                            <p>Add Multi-buy Discount</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 text-center">
+                        <div class="benefit_logo">
+                            <svg width="28" height="26" viewBox="0 0 28 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.95714 17.1751V17.1751C4.56278 17.4417 3.21515 16.5278 2.94712 15.1337L1.49398 7.57539C1.20201 6.0568 2.19523 4.59054 3.7141 4.30006C5.84956 3.89167 8.8161 3.32434 11.0642 2.89441C13.3382 2.45952 16.3579 1.93862 18.5073 1.57549C20.0034 1.32272 21.4228 2.31414 21.7092 3.80416C21.8101 4.32882 21.9181 4.89047 22.0257 5.44992"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path
+                                    d="M6.10693 9.6801V18.9102C6.10693 20.3262 7.25788 21.4741 8.67764 21.4741H8.992C9.52827 21.4741 9.96299 21.9088 9.96299 22.4451C9.96299 23.5022 10.0524 25.0661 11.112 25.0365C11.8308 25.0164 12.0877 24.14 12.4786 23.5381L12.991 22.749C13.5074 21.9539 14.3912 21.4741 15.3393 21.4741H23.0736C25.0613 21.4741 26.6726 19.8673 26.6726 17.8849V9.76549C26.6726 7.82707 25.4022 6.13737 23.4592 6.09062C21.3657 6.04023 18.4467 6.09063 16.3898 6.09063H9.70539C7.71772 6.09063 6.10693 7.69769 6.10693 9.6801Z"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <ellipse cx="11.2482" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
+                                <ellipse cx="16.3898" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
+                                <ellipse cx="21.531" cy="13.7825" rx="1.28535" ry="1.28195" fill="#2B38D1"></ellipse>
+                            </svg>
+                        </div>
+                        <div class="benefit_content">
+                            <h4>HELP CENTER</h4>
+                            <p>Dedicated 24/7 Support</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-2 text-center">
+                        <div class="benefit_logo">
+                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.8916 19.0584L9.06588 19.2219C4.62937 19.2832 1 15.7037 1 11.2667V11.2667"
+                                    stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round"></path>
+                                <rect x="1" y="2.46698" width="20.5333" height="20.5333" rx="2.8" stroke="#2B38D1"
+                                    stroke-width="1.5"></rect>
+                                <path d="M6.86621 3.93333V1" stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                                <path d="M15.667 3.93333V1" stroke="#2B38D1" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                                <line x1="5.59961" y1="13.1747" x2="11.7996" y2="13.1747" stroke="#2B38D1"
+                                    stroke-width="1.5" stroke-linecap="round"></line>
+                                <line x1="5.59961" y1="9.32483" x2="14.3663" y2="9.32483" stroke="#2B38D1"
+                                    stroke-width="1.5" stroke-linecap="round"></line>
+                            </svg>
+                        </div>
+                        <div class="benefit_content">
+                            <h4>CURATED ITEMS</h4>
+                            <p>From Handpicked Sellers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====================back to top buton==================== -->
+    <div class="d-none d-lg-block">
+        <a class="back_to_top" href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
+
+    <!-- =======================footer section============== -->
+    <footer id="footer">
+        <section id="footer_top">
+            <div class="main_footer">
+                <div class="container">
+                    <div class="row row-gap-4">
+                        <div class="footer_item contact_information col-lg-4 col-md-6 col-12">
+                            <h3 class="footer_item_title">
+                                <span class="txt_title">About The Store</span>
+                            </h3>
+                            <div class="footer_item_body">
+                                <div class="information">
+                                    <div class="text">Got Question? Call us 24/7</div>
+                                    <a class="phone" href="tel:+222-1800-262" style="color: #2b38d1">+222-1800-262</a>
+                                    <div class="Address">
+                                        268 St, South New York/NY 98944, United States
+                                        <br />Customersupport@example.com
+                                    </div>
+                                    <a href="mailto:abcd@gmail.com">Aloshopify@alothemes.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-iteam col-lg-2 col-md-6 col-12">
+                            <h3 class="footer_item_title">
+                                <span class="txt_title">Infomation</span>
+                            </h3>
+                            <div class="menu_footer">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="/blogs/technology">Blog Us</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Delivery Information</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Privacy Policy</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">FeedBack</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-iteam col-lg-2 col-md-6 col-12">
+                            <h3 class="footer_item_title">
+                                <span class="txt_title">Quick Links</span>
+                            </h3>
+                            <div class="menu_footer">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a href="#">Store Location</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">Orders Tracking</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="#">FAQs </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-iteam col-lg-4 col-md-6 col-12">
+                            <h3 class="footer_item_title">
+                                <span class="txt_title">Newsletter Signup</span>
+                            </h3>
+                            <div class="widget_footer">
+                                <div class="sub-email" style="color: #515d66">
+                                    Join 20.000+ subscribers and get a new discount coupon on
+                                    every Saturday. Updates information on Sales and Offers.
+                                </div>
+                                <div class="footer-mail">
+                                    <form method="post" action="#" id="contact_form">
+                                        <div class="signup-newsletter-form">
+                                            <div class="col_email">
+                                                <input type="email" name="contact[email]"
+                                                    placeholder="Your email address..." value="" class="input-text"
+                                                    required="required" />
+                                            </div>
+                                            <div class="col_btn">
+                                                <button type="submit" class="submit-btn truncate">
+                                                    <span>Subscribe</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="sub-email2" style="color: #515d66">
+                                    Subscribe for Uminex and get 20% off your first purchase.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer_bottom">
+            <div class="container">
+                <p class="text-center d-flex flex-column row-gap-3">
+                    <span>Copyright © <a href="#" title="Uminex">Uminex</a> all rights
+                        reserved.</span>
+                    <span>
+                        Powered by <a href="#" title="Alothemes">Alothemes</a>.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="../../js/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="../../js/slick.min.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+
+</html>
