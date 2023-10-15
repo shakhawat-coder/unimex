@@ -18,17 +18,11 @@
 <body id="top">
     <nav class="navbar small_device d-block d-lg-none">
         <div class="container">
-            <a class="navbar-brand order-2 order-lg-1" href="#">
-                <div class="logo col-md-3 ">
-                    <img src="./images/logo.avif" alt="" />
-                </div>
-            </a>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-end" tvbar-tx="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <span data-bs-dismiss="offcanvas" aria-label="Close">Close</span>
@@ -41,100 +35,190 @@
                                 <h3>WHAT ARE YOU LOOKING FOR?</h3>
                                 <a href="" class="header-search push_side header-icon" data-id="#search_pupop"
                                     title="Search">
-
                                     <span class="icon"><i class="icon-search fas fa-search"></i></span>
 
                                     <span>Search</span>
                                 </a>
                             </li>
                             <li class="item_signin menu-item item-popup item-level-0">
-                                <a href="/account/login" data-id="#login_pupop" class="push_side header-icon"
-                                    title="Login / Register">
-
+                                <a href="" data-id="#login_pupop" data-bs-target="#login_pupop"
+                                    class="push_side header-icon" title="Login / Register">
                                     <span class="icon"><i class="icon-users"></i></span>
 
                                     <span>Login / Register</span>
                                 </a>
+                                <div class="modal fade fixed" id="login_pupop" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered my-0">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="nav nav-tabs d-flex align-items-center justify-content-evenly"
+                                                id="nav-tab" role="tablist">
+                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#login" type="button" role="tab"
+                                                    aria-controls="nav-home" aria-selected="true">
+                                                    Login
+                                                </button>
+                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#registration" type="button" role="tab"
+                                                    aria-controls="nav-profile">
+                                                    Registration
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="tab-content">
+                                                    <div id="login" class="tab-pane show active description_main"
+                                                        data-order="1">
+                                                        <form method="post" action="#" id="customer_login"
+                                                            class="login login-register-form content-form ">
+                                                            <div class="login-form">
+                                                                <div class="label-text mb-3">
+                                                                    <label class="mb-1">Email Address
+                                                                        <span>*</span></label>
+                                                                    <p>
+                                                                        <input required="" class="input-info "
+                                                                            type="email" name="email" id="CustomerEmail"
+                                                                            autocomplete="email" autocorrect="off"
+                                                                            autocapitalize="off"
+                                                                            placeholder="Email Address">
+                                                                    </p>
+                                                                </div>
+                                                                <div class="label-text mb-3">
+                                                                    <label class="mb-1">Password <span>*</span></label>
+                                                                    <p>
+                                                                        <input required="" class="input-info "
+                                                                            type="password" value="" name="password"
+                                                                            id="CustomerPassword"
+                                                                            autocomplete="current-password"
+                                                                            placeholder="Password">
+                                                                    </p>
+                                                                </div>
+                                                                <div
+                                                                    class="label-text check d-flex justify-content-between mb-3">
+                                                                    <div class="check-box">
+                                                                        <input class="login-check" type="checkbox"
+                                                                            id="login-check" name="rememberme"
+                                                                            value="forever"><label class="text-label"
+                                                                            for="login-check"> Remember me </label>
+                                                                    </div>
+                                                                    <a href="#" id="RecoverPassword"
+                                                                        class="forgot">Forgot your
+                                                                        password ?</a>
+                                                                </div>
+                                                                <div class="group-button">
+                                                                    <input type="submit" class="button submit"
+                                                                        name="login" value="Login">
+                                                                </div>
+                                                                <div class="text text-center pt-3">
+                                                                    <p>New user discount applies only to full price
+                                                                        items. <br>By providing your email
+                                                                        address, you agree to our<br>
+                                                                        <a href="">Privacy Policy</a> and <a
+                                                                            href="#">Terms of
+                                                                            Service</a>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div id="registration" class="tab-pane additional_information"
+                                                        data-order="2">
+                                                        <form method="post" action="#" id="create_customer"
+                                                            accept-charset="UTF-8" data-login-with-shop-sign-up="true"
+                                                            class="register login-register-form content-form init"
+                                                            novalidate="novalidate"><input type="hidden"
+                                                                name="form_type" value="create_customer"><input
+                                                                type="hidden" name="utf8" value="✓">
+
+                                                            <div class="register-form">
+                                                                <div class="label-text mb-3">
+                                                                    <label>First Name <span>*</span></label>
+                                                                    <p>
+                                                                        <input required="" class="required input-info "
+                                                                            type="text" name="first_name"
+                                                                            id="RegisterForm-FirstName"
+                                                                            autocomplete="given-name"
+                                                                            placeholder="First Name">
+                                                                    </p>
+                                                                </div>
+                                                                <div class="label-text mb-3">
+                                                                    <label>Last Name <span>*</span></label>
+                                                                    <p>
+                                                                        <input required="" class="required input-info "
+                                                                            type="text" name="last_name"
+                                                                            id="RegisterForm-LastName"
+                                                                            autocomplete="family-name"
+                                                                            placeholder="Last Name">
+                                                                    </p>
+                                                                </div>
+                                                                <div class="label-text mb-3">
+                                                                    <label>Email Address <span>*</span></label>
+                                                                    <p>
+                                                                        <input required=""
+                                                                            class="required email input-info "
+                                                                            type="email" name="email"
+                                                                            id="RegisterForm-email" spellcheck="false"
+                                                                            autocapitalize="off" autocomplete="email"
+                                                                            aria-required="true"
+                                                                            placeholder="Email Address">
+                                                                    </p>
+
+                                                                </div>
+
+                                                                <div class="label-text mb-3">
+                                                                    <label>Password <span>*</span></label>
+                                                                    <p>
+                                                                        <input required="" placeholder="Password"
+                                                                            type="password" name="password"
+                                                                            id="CreatePassword" autocomplete="on"
+                                                                            class="required password input-info">
+                                                                    </p>
+                                                                </div>
+
+                                                                <div class="group-button">
+                                                                    <input type="submit" class="button submit"
+                                                                        value="Create New Account">
+                                                                </div>
+                                                                <div class="text text-center pt-3">
+                                                                    <p>New user discount applies only to full price
+                                                                        items. <br>By providing your email
+                                                                        address, you agree to our<br>
+                                                                        <a href="">Privacy Policy</a> and <a
+                                                                            href="/pages/terms-and-conditions">Terms of
+                                                                            Service</a>.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
 
                             <li id="item_mobile_menu-0" class="menu-item item-level-0 has-children">
-                                <a href="#" target="_self">
-
-                                    <span>Home
-                                    </span>
-                                </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="display: none;">
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=147066650909">Home 1</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=147368706333">Home 2</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=147690389789">Home 3</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=148057162013">Home 4</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=148217331997">Home 5</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=148610187549">Home 6</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=149059141917">Home 7</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=155063550237">Home 8</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=155169947933">Home 9</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/?preview_theme_id=155245969693">Home 10</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="https://demo-puik.myshopify.com/?preview_theme_id=155208778012">Home
-                                            11</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="https://demo-puik.myshopify.com/?preview_theme_id=156281635100">Home
-                                            12</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="https://demo-puik.myshopify.com/?preview_theme_id=157145137436">Home
-                                            13</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="https://demo-puik.myshopify.com/?preview_theme_id=157584458012">Home
-                                            14</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="https://demo-puik.myshopify.com/?preview_theme_id=158842257692">Home
-                                            15</a>
-                                    </li>
-                                </ul>
+                                <a href="./index.html" target="_self">Home</a>
                             </li>
                             <li id="item_mobile_menu-1" class="menu-item item-level-0 has-children">
                                 <a href="/collections/all" target="_self">
-
                                     <span>Shop
-                                        <span class="label" style="background-color: #d93939">New</span>
-                                    </span>
-                                </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="display: none;">
+                                    </span> </a><span class="collapse">collapse</span>
+                                <ul class="sub-menu" style="display: none">
                                     <li class="menu-item item-level-1">
                                         <a href="/collections/accessories">Accessories</a>
                                     </li>
                                     <li class="menu-item item-level-1">
                                         <a href="/collections/cameras-photos">Cameras &amp; Photos</a>
                                     </li>
-                                    <li class="menu-item item-level-1 has-children ">
+                                    <li class="menu-item item-level-1 has-children">
                                         <a href="/collections/laptop-ipad">
-                                            <span>Laptop &amp; Ipad</span>
-                                        </a><span class="collapse">collapse</span>
-                                        <ul class="sub-menu2" style="display: none;">
+                                            <span>Laptop &amp; Ipad</span> </a><span class="collapse">collapse</span>
+                                        <ul class="sub-menu2" style="display: none">
                                             <li class="menu-item item-level-2">
                                                 <a href="/collections/air-conditioners">
                                                     Air Conditioners
@@ -156,9 +240,7 @@
                                                 </a>
                                             </li>
                                             <li class="menu-item item-level-2">
-                                                <a href="/collections/desktop-pc">
-                                                    Desktop PC
-                                                </a>
+                                                <a href="/collections/desktop-pc"> Desktop PC </a>
                                             </li>
                                             <li class="menu-item item-level-2">
                                                 <a href="/collections/refrigerators">
@@ -191,11 +273,8 @@
                             </li>
                             <li id="item_mobile_menu-2" class="menu-item item-level-0 has-children">
                                 <a href="#" target="_self">
-
-                                    <span>page
-                                    </span>
-                                </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="display: none;">
+                                    <span>page </span> </a><span class="collapse">collapse</span>
+                                <ul class="sub-menu" style="">
                                     <li class="menu-item item-level-1">
                                         <a href="/pages/about-us">About Us</a>
                                     </li>
@@ -221,11 +300,8 @@
                             </li>
                             <li id="item_mobile_menu-3" class="menu-item item-level-0 has-children">
                                 <a href="/blogs/technology" target="_self">
-
-                                    <span>Blog
-                                    </span>
-                                </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="display: none;">
+                                    <span>Blog </span> </a><span class="collapse">collapse</span>
+                                <ul class="sub-menu" style="display: none">
                                     <li class="menu-item item-level-1">
                                         <a
                                             href="https://demo-uminex.myshopify.com/blogs/technology/?preview_theme_id=147066650909">Blog
@@ -255,12 +331,11 @@
                                     <li class="menu-item item-level-1">
                                         <a href="#">List no sidebar</a>
                                     </li>
-                                    <li class="menu-item item-level-1 has-children ">
+                                    <li class="menu-item item-level-1 has-children">
                                         <a
                                             href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029">
-                                            <span>Detail Blog </span>
-                                        </a><span class="collapse">collapse</span>
-                                        <ul class="sub-menu2" style="display: none;">
+                                            <span>Detail Blog </span> </a><span class="collapse">collapse</span>
+                                        <ul class="sub-menu2" style="display: none">
                                             <li class="menu-item item-level-2">
                                                 <a
                                                     href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029/?preview_theme_id=147066650909">
@@ -285,250 +360,31 @@
                             </li>
                             <li class="item_wishlist menu-item item-popup item-level-0">
                                 <a href="#" class="push_side" data-id="#wishlist_popup" title="Wishlist">
-
                                     <span class="icon"><i class="icon-heart"></i></span>
 
                                     <span>Wishlist</span>&nbsp;(<span class="count" data-js-wishlist-count="0">0</span>)
                                 </a>
                             </li>
-                            <li class="item_compare menu-item item-popup item-level-0">
-                                <a href="#" class="push_side header-icon" data-js-popup-button="compare-full"
-                                    title="Compare">
-
-                                    <span class="icon"><i class="icon-layers"></i></span>
-
-                                    <span>Compare</span>&nbsp;(<span class="count" data-js-compare-count="0">0</span>)
-                                </a>
-                            </li>
-                            <li id="item_961fa2fa-0c91-4435-8f22-2faa48b985c5" class="menu-item item-level-0">
-                                <a href="/pages/contact" target="_self">
-
+                            <li id="" class="menu-item item-level-0">
+                                <a href="./pages/contact/contact.html" target="_self">
                                     <span> Contact Us</span>
-
                                 </a>
                             </li>
-                            <div class="language_currency_mobile">
-
-                                <noscript class="small-hide medium-hide ">
-                                    <form method="post" action="/localization" id="HeaderLanguageMobileFormNoScript"
-                                        accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data">
-                                        <input type="hidden" name="form_type" value="localization" /><input
-                                            type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method"
-                                            value="put" /><input type="hidden" name="return_to" value="/" />
-                                        <div class="localization-form__select">
-                                            <h2 class="visually-hidden" id="HeaderLanguageMobileLabelNoScript">Language
-                                            </h2>
-                                            <select class="localization-selector link" name="locale_code"
-                                                aria-labelledby="HeaderLanguageMobileLabelNoScript">
-                                                <option value="en" lang="en" selected>
-                                                    English
-                                                </option>
-                                                <option value="fr" lang="fr">
-                                                    Français
-                                                </option>
-                                                <option value="de" lang="de">
-                                                    Deutsch
-                                                </option>
-                                            </select>
-                                            <i class="icon-plus icon-caret"></i>
-                                        </div>
-                                        <button class="button button--tertiary">Update language</button>
-                                    </form>
-                                </noscript>
-                                <localization-form class="small-hide medium-hide no-js-hidden true">
-                                    <form method="post" action="/localization" id="HeaderLanguageForm"
-                                        accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data">
-                                        <input type="hidden" name="form_type" value="localization"><input type="hidden"
-                                            name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input
-                                            type="hidden" name="return_to" value="/">
-                                        <div>
-                                            <h2 class="visually-hidden" id="HeaderLanguageLabel">Language</h2>
-                                            <div class="disclosure">
-                                                <button type="button"
-                                                    class="disclosure__button localization-form__select localization-selector link link--text caption-large"
-                                                    aria-expanded="false" aria-controls="HeaderLanguageList"
-                                                    aria-describedby="HeaderLanguageLabel">
-                                                    <img alt="EN" class="flag" width="16px" height="12px"
-                                                        src="//demo-uminex.myshopify.com/cdn/shop/t/4/assets/flag_en.png?v=14076981825125011091681116945">
-                                                    <span>English</span>
-                                                    <i class="icon-chevron-down"></i>
-                                                </button>
-                                                <div class="disclosure__list-wrapper" hidden="">
-                                                    <ul id="HeaderLanguageList" role="list"
-                                                        class="disclosure__list list-unstyled" style="display: none;">
-                                                        <li class="disclosure__item active" tabindex="-1">
-                                                            <a class="link link--text disclosure__link caption-large focus-inset"
-                                                                href="#" hreflang="en" lang="en" aria-current="true"
-                                                                data-value="en">
-                                                                <img alt="English" class="flag" width="16px"
-                                                                    height="12px"
-                                                                    src="//demo-uminex.myshopify.com/cdn/shop/t/4/assets/flag_en.png?v=14076981825125011091681116945">
-                                                                English
-                                                            </a>
-                                                        </li>
-                                                        <li class="disclosure__item " tabindex="-1">
-                                                            <a class="link link--text disclosure__link caption-large focus-inset"
-                                                                href="#" hreflang="fr" lang="fr" data-value="fr">
-                                                                <img alt="French" class="flag" width="16px"
-                                                                    height="12px"
-                                                                    src="//demo-uminex.myshopify.com/cdn/shop/t/4/assets/flag_fr.png?v=69148847184916641131681116939">
-                                                                Français
-                                                            </a>
-                                                        </li>
-                                                        <li class="disclosure__item " tabindex="-1">
-                                                            <a class="link link--text disclosure__link caption-large focus-inset"
-                                                                href="#" hreflang="de" lang="de" data-value="de">
-                                                                <img alt="German" class="flag" width="16px"
-                                                                    height="12px"
-                                                                    src="//demo-uminex.myshopify.com/cdn/shop/t/4/assets/flag_de.png?v=69801997571936479461681116940">
-                                                                Deutsch
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <input type="hidden" name="locale_code" value="en">
-                                        </div>
-                                    </form>
-                                </localization-form>
-
-                                <noscript class="small-hide medium-hide">
-                                    <form method="post" action="/localization" id="HeaderCountryMobileFormNoScript"
-                                        accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data">
-                                        <input type="hidden" name="form_type" value="localization" /><input
-                                            type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method"
-                                            value="put" /><input type="hidden" name="return_to" value="/" />
-                                        <div class="localization-form__select">
-                                            <select class="localization-selector link" name="country_code"
-                                                aria-labelledby="HeaderCountryMobileLabelNoScript">
-                                                <option value="CA">
-                                                    Canada (CAD
-                                                    $)
-                                                </option>
-                                                <option value="JP">
-                                                    Japan (JPY
-                                                    ¥)
-                                                </option>
-                                                <option value="GB">
-                                                    United Kingdom (GBP
-                                                    £)
-                                                </option>
-                                                <option value="US" selected>
-                                                    United States (USD
-                                                    $)
-                                                </option>
-                                            </select>
-                                            <i class="icon-plus icon-caret"></i>
-                                        </div>
-                                        <button class="button button--tertiary">Update country/region</button>
-                                    </form>
-                                </noscript>
-                                <localization-form class="small-hide medium-hide no-js-hidden">
-                                    <form method="post" action="/localization" id="HeaderCountryForm"
-                                        accept-charset="UTF-8" class="localization-form" enctype="multipart/form-data">
-                                        <input type="hidden" name="form_type" value="localization"><input type="hidden"
-                                            name="utf8" value="✓"><input type="hidden" name="_method" value="put"><input
-                                            type="hidden" name="return_to" value="/">
-                                        <div>
-                                            <h2 class="visually-hidden" id="HeaderCountryLabel">Country/region</h2>
-                                            <button type="button"
-                                                class="disclosure__button localization-form__select localization-selector link link--text caption-large"
-                                                aria-expanded="false" aria-controls="HeaderCountryList"
-                                                aria-describedby="HeaderCountryLabel">
-                                                <span>
-                                                    United States(USD
-                                                    $)
-                                                </span>
-                                                <i class="icon-chevron-down"></i>
-                                            </button>
-                                            <div class="disclosure__list-wrapper" hidden="">
-                                                <ul class="USD dropdown list-currencies currency-lists"
-                                                    style="display: none;">
-                                                    <li class="disclosure__item " tabindex="-1">
-                                                        <a class="link link--text disclosure__link caption-large focus-inset"
-                                                            href="#" data-value="CA">
-                                                            <span class="localization-form__currency">
-                                                                Canada (CAD
-                                                                $)
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="disclosure__item " tabindex="-1">
-                                                        <a class="link link--text disclosure__link caption-large focus-inset"
-                                                            href="#" data-value="JP">
-                                                            <span class="localization-form__currency">
-                                                                Japan (JPY
-                                                                ¥)
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="disclosure__item " tabindex="-1">
-                                                        <a class="link link--text disclosure__link caption-large focus-inset"
-                                                            href="#" data-value="GB">
-                                                            <span class="localization-form__currency">
-                                                                United Kingdom (GBP
-                                                                £)
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="disclosure__item active" tabindex="-1">
-                                                        <a class="link link--text disclosure__link caption-large focus-inset"
-                                                            href="#" aria-current="true" data-value="US">
-                                                            <span class="localization-form__currency">
-                                                                United States (USD
-                                                                $)
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <input type="hidden" name="country_code" value="US">
-                                        </div>
-                                    </form>
-                                </localization-form>
-
-                            </div>
-
                         </ul>
-                        <style data-shopify="">
-                            :root {
-                                --color-bg-menu-mobile: #ffffff;
-                                --color-bd-menu-mobile: #e5e8ec;
-                                --color-text-menu-mobile: #212529;
-                                --color-text-menu-mobile-hover: #2b38d1;
-                            }
-                        </style>
                     </div>
-                    <!-- <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul> -->
-
                 </div>
             </div>
-            <ul class="box-minicart d-block d-lg-none order-3">
+            <a class="navbar-brand  order-lg-1" href="#">
+                <div class="logo col-md-3">
+                    <img src="./images/logo.avif" alt="" />
+                </div>
+            </a>
+            <ul class="box-minicart d-block d-lg-none ">
                 <li>
                     <div class="minicart">
                         <div class="d-flex align-items-center cart-block box-has-content">
-                            <a href="/cart" class="push_side header-icon" data-id="#js_cart_popup" title="Your Cart">
+                            <a href="./pages/cart/cart.html" class="push_side header-icon" data-id="#js_cart_popup"
+                                title="Your Cart">
                                 <svg width="27" height="23" viewBox="0 0 27 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -549,8 +405,7 @@
             </ul>
             <div class="search-bar pt-4 col-12 d-block d-lg-none order-4">
                 <div class="header-search">
-                    <form action="/search" method="post" class="search_header mini_search_frm pr js_frm_search"
-                        role="search">
+                    <form action="#" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
                         <div class="row">
                             <div class="frm_search_input col">
                                 <input class="search_header_input" autocomplete="off" type="text" name="q"
@@ -571,7 +426,7 @@
     <header class="navbar d-none d-lg-block top_navbar navbar-expand-lg">
         <div class="container">
             <div class="logo col-md-3 order-2 order-lg-1">
-                <a href="#"><img src="./images/logo.avif" alt="" /></a>
+                <a href="./index.html"><img src="./images/logo.avif" alt="" /></a>
             </div>
             <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
@@ -645,8 +500,8 @@
                 <div class="col-md-3 order-lg-3">
                     <ul class="header-control d-flex align-items-center">
                         <li class="signin item-list">
-                            <a href="/account/login" data-id="#login_pupop"
-                                class="d-flex align-items-center push_side header-icon" title="Login">
+                            <a href="" data-id="#login_pupop" class="d-flex align-items-center push_side header-icon"
+                                title="Login">
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -920,8 +775,8 @@
             </div>
         </div>
     </nav>
-    <!-- ================benefit section=========== -->
 
+    <!-- ================benefit section=========== -->
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>

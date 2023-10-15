@@ -286,6 +286,36 @@ $('.related_product_wrapper').slick({
   autoplay: true,
   prevArrow:".related_product_slider .prev",
   nextArrow:".related_product_slider .next",
+  responsive:[
+    {
+    breakpoint: 400,
+    settings:{
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 768,
+    settings:{
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 992,
+    settings:{
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 2600,
+    settings:{
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      }
+    },
+  ]
 });
 $('.recently_viewd_product_wrapper').slick({
   infinite: false,
@@ -294,6 +324,36 @@ $('.recently_viewd_product_wrapper').slick({
   autoplay: true,
   prevArrow:".recently_viewd_product_slider .prev",
   nextArrow:".recently_viewd_product_slider .next",
+  responsive:[
+    {
+    breakpoint: 400,
+    settings:{
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 768,
+    settings:{
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 992,
+    settings:{
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      }
+    },
+    {
+    breakpoint: 2600,
+    settings:{
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      }
+    },
+  ]
 });
 $('.top_selling_product_wrapper').slick({
   infinite: false,

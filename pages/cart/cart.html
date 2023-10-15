@@ -94,8 +94,10 @@
                 <div class="col-md-3 order-lg-3">
                     <ul class="header-control d-flex align-items-center">
                         <li class="signin item-list">
-                            <a href="/account/login" data-id="#login_pupop"
-                                class="d-flex align-items-center push_side header-icon" title="Login">
+                        <li class="signin item-list">
+                            <a href="./login.html" data-id="#login_pupop" data-bs-toggle="modal"
+                                data-bs-target="#login_pupop" class="d-flex align-items-center push_side header-icon"
+                                title="Login">
                                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -110,6 +112,157 @@
                                     <span class="b">Account</span>
                                 </div>
                             </a>
+                            <div class="modal fade fixed" id="login_pupop" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered my-0">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="nav nav-tabs d-flex align-items-center justify-content-evenly"
+                                            id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#login" type="button" role="tab"
+                                                aria-controls="nav-home" aria-selected="true">
+                                                Login
+                                            </button>
+                                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#registration" type="button" role="tab"
+                                                aria-controls="nav-profile">
+                                                Registration
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="tab-content">
+                                                <div id="login" class="tab-pane show active description_main"
+                                                    data-order="1">
+                                                    <form method="post" action="#" id="customer_login"
+                                                        class="login login-register-form content-form ">
+                                                        <div class="login-form">
+                                                            <div class="label-text mb-3">
+                                                                <label class="mb-1">Email Address <span>*</span></label>
+                                                                <p>
+                                                                    <input required="" class="input-info " type="email"
+                                                                        name="email" id="CustomerEmail"
+                                                                        autocomplete="email" autocorrect="off"
+                                                                        autocapitalize="off"
+                                                                        placeholder="Email Address">
+                                                                </p>
+                                                            </div>
+                                                            <div class="label-text mb-3">
+                                                                <label class="mb-1">Password <span>*</span></label>
+                                                                <p>
+                                                                    <input required="" class="input-info "
+                                                                        type="password" value="" name="password"
+                                                                        id="CustomerPassword"
+                                                                        autocomplete="current-password"
+                                                                        placeholder="Password">
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="label-text check d-flex justify-content-between mb-3">
+                                                                <div class="check-box">
+                                                                    <input class="login-check" type="checkbox"
+                                                                        id="login-check" name="rememberme"
+                                                                        value="forever"><label class="text-label"
+                                                                        for="login-check"> Remember me </label>
+                                                                </div>
+                                                                <a href="#" id="RecoverPassword" class="forgot">Forgot
+                                                                    your
+                                                                    password ?</a>
+                                                            </div>
+                                                            <div class="group-button">
+                                                                <input type="submit" class="button submit" name="login"
+                                                                    value="Login">
+                                                            </div>
+                                                            <div class="text text-center pt-3">
+                                                                <p>New user discount applies only to full price items.
+                                                                    <br>By providing your email
+                                                                    address, you agree to our<br>
+                                                                    <a href="">Privacy Policy</a> and <a href="#">Terms
+                                                                        of
+                                                                        Service</a>.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div id="registration" class="tab-pane additional_information"
+                                                    data-order="2">
+                                                    <form method="post" action="#" id="create_customer"
+                                                        accept-charset="UTF-8" data-login-with-shop-sign-up="true"
+                                                        class="register login-register-form content-form init"
+                                                        novalidate="novalidate"><input type="hidden" name="form_type"
+                                                            value="create_customer"><input type="hidden" name="utf8"
+                                                            value="✓">
+
+                                                        <div class="register-form">
+                                                            <div class="label-text mb-3">
+                                                                <label>First Name <span>*</span></label>
+                                                                <p>
+                                                                    <input required="" class="required input-info "
+                                                                        type="text" name="first_name"
+                                                                        id="RegisterForm-FirstName"
+                                                                        autocomplete="given-name"
+                                                                        placeholder="First Name">
+                                                                </p>
+                                                            </div>
+                                                            <div class="label-text mb-3">
+                                                                <label>Last Name <span>*</span></label>
+                                                                <p>
+                                                                    <input required="" class="required input-info "
+                                                                        type="text" name="last_name"
+                                                                        id="RegisterForm-LastName"
+                                                                        autocomplete="family-name"
+                                                                        placeholder="Last Name">
+                                                                </p>
+                                                            </div>
+                                                            <div class="label-text mb-3">
+                                                                <label>Email Address <span>*</span></label>
+                                                                <p>
+                                                                    <input required=""
+                                                                        class="required email input-info " type="email"
+                                                                        name="email" id="RegisterForm-email"
+                                                                        spellcheck="false" autocapitalize="off"
+                                                                        autocomplete="email" aria-required="true"
+                                                                        placeholder="Email Address">
+                                                                </p>
+
+                                                            </div>
+
+                                                            <div class="label-text mb-3">
+                                                                <label>Password <span>*</span></label>
+                                                                <p>
+                                                                    <input required="" placeholder="Password"
+                                                                        type="password" name="password"
+                                                                        id="CreatePassword" autocomplete="on"
+                                                                        class="required password input-info">
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="group-button">
+                                                                <input type="submit" class="button submit"
+                                                                    value="Create New Account">
+                                                            </div>
+                                                            <div class="text text-center pt-3">
+                                                                <p>New user discount applies only to full price items.
+                                                                    <br>By providing your email
+                                                                    address, you agree to our<br>
+                                                                    <a href="">Privacy Policy</a> and <a
+                                                                        href="/pages/terms-and-conditions">Terms of
+                                                                        Service</a>.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         </li>
                         <li class="laber-wishlist d-none d-lg-block">
                             <a data-id="#wishlist_popup" href="#" class="push_side header-icon" title="Wishlist">
@@ -402,13 +555,14 @@
                                         <tr class="product-item each-item">
                                             <td class="product-name">
                                                 <div class="wrap_item_cart">
-                                                    <a class="product-thumb img" href="#">
+                                                    <a class="product-thumb img" href="../product/product.html">
                                                         <img width="150"
                                                             alt="Laptop Dell Vostro 3400 Intel Core i3 - 256GB"
                                                             src="//demo-uminex.myshopify.com/cdn/shop/products/products_14_1_grande.jpg?v=1672302856">
                                                     </a>
                                                     <div class="wrap_title_cart">
-                                                        <a href="#" class="produpr-name">Laptop Dell Vostro 3400 Intel
+                                                        <a href="../product/product.html" class="produpr-name">Laptop
+                                                            Dell Vostro 3400 Intel
                                                             Core i3 - 256GB</a>
                                                         <dl></dl>
                                                         <p class="product-option"></p>
@@ -853,6 +1007,273 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </section>
+    <!-- =================Featured Products section============== -->
+    <section id="new_arrival">
+        <div class="container">
+            <div class="section_header d-flex justify-content-between align-items-md-center">
+                <h4>NEW ARRIVALS</h4>
+                <a href="#">View all <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="">
+                <div class="feature_product_slider position-relative">
+                    <div class="prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="feature_product_wrapper row">
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto position-relative">
+                            <div class="feature_product_item single_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <a href="">
+                                            <img class="image1" src="../../images/discount1.webp" class="card-img-top"
+                                                alt="..." />
+                                            <img class="image2" src="../../images/discount1_h0.webp"
+                                                class="card-img-top" alt="..." />
+                                        </a>
+                                    </div>
+                                    <div class="card_icon d-flex">
+                                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                                        <a href=""><i class="fa-solid fa-layer-group"></i></a>
+                                        <a href=""><i class="fa-regular fa-eye"></i></a>
+                                    </div>
+                                    <div class="card-body position-absolute">
+                                        <a href="#">
+                                            <h5 class="card-title">
+                                                Laptop Apple MacBook Pro M1...
+                                            </h5>
+                                        </a>
+                                        <div class="star d-flex align-items-center">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <span>(1 review)</span>
+                                        </div>
+                                        <div class="price">$230</div>
+                                        <div class="progress" role="progressbar" aria-label="Basic example"
+                                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar" style="width: 55%"></div>
+                                        </div>
+                                        <p class="sold">Sold: <span>55/100</span> products</p>
+                                        <a href="#" class="btn">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

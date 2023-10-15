@@ -16,6 +16,12 @@ ol.breadcrumb{
     position: sticky;
     top: 0;
 }
+.exzoom .exzoom_img_box {
+    margin: 0 auto;
+}
+.exzoom .exzoom_nav {
+    overflow: visible;
+}
 .exzoom .exzoom_img_ul_outer {
     border: none ;
     position: absolute;
@@ -34,13 +40,6 @@ ol.breadcrumb{
     display: none !important;
 }
 .exzoom .exzoom_preview {
-    margin: 0px;
-    position: absolute;
-    top: 0px;
-    overflow: hidden;
-    z-index: 0;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(221, 221, 221);
     display: none !important;
 }
 #product_details{
@@ -262,6 +261,9 @@ ol.breadcrumb{
     padding-top: 25px;
     border-top: 1px solid #e5e8ec;
 }
+.product-iteam .content p{
+    line-height: 1.5;
+}
 .product_infor {
     display: flex;
     gap: 10px;
@@ -359,8 +361,8 @@ ol.breadcrumb{
     margin: 40px 0 !important;
 }
 #tabs_product .tab-content .description .row img{
-    width: 350px;
-
+    width: 100%;
+    /* margin: 0 10px; */
 }
 #tabs_product .tab_content .description .shipping_return ul li{
     color: var(--color-text-body);
@@ -371,8 +373,61 @@ ol.breadcrumb{
 }
 /* =================Extra small device========= */
 @media (max-width:575.99px) {
-    .exzoom .exzoom_img_box {
+    #exzoom{
+        width: 100%;
+    }
+  
+    .exzoom .exzoom_img_ul_outer {
         width: 100% !important;
-        height: 267px !important;
+        overflow: hidden !important;
+    }
+   
+    .exzoom .exzoom_preview {
+        
+        display: none !important;
+    }
+    .exzoom .exzoom_nav .exzoom_nav_inner span {
+        height: 40px !important;
+        width: 40px !important;
+        overflow: hidden;
+    }
+    .group-button .add-to-cart{
+        width: 100%;
+    }
+    .exzoom .exzoom_img_ul_outer .exzoom_img_ul li {
+        width: 100% ;
+
+    }
+    #tabs_product .tab-content .description .row img{
+        width: 100%;
+    }
+    .quantity{
+        margin-right: 400px;
+    }
+    .product_details {
+        padding: 10px;
+    }
+}
+/* =====================small screen============= */
+@media (min-width:576px) and (max-width:767.99px) {
+    #exzoom{
+        width: 100%;
+    }
+ 
+    .exzoom .exzoom_preview {
+        display: none !important;
+    }
+    .group-button .add-to-cart{
+        width: 100%;
+    }
+    #tabs_product .tab-content .description .row img{
+        width: 100%;
+    }
+}
+
+/* =====================large screen============= */
+@media (min-width:992px) and (max-width:1199.99px) {
+    .container{
+        
     }
 }

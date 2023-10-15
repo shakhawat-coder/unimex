@@ -86,6 +86,12 @@ h1,h2,h3,h4,h5,h6,p{
         margin: 0 auto;
     }
 }
+@media (min-width:1201px){
+    .container{
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
 
 .back_to_top {
     bottom: 120px;
@@ -956,7 +962,8 @@ input {
   #recommend_product a h5,
   #top_selling a h5,
   #related_product a h5,
-  #recently_viewd_product a h5{
+  #recently_viewd_product a h5,
+  #new_arrival a h5{
     color: var(--color-name-product);
     width: 100%;
     overflow: hidden;
