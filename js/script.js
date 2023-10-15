@@ -436,4 +436,9 @@ initializeClock('clockdiv', deadline);
 
   
 
-// ===========mixitup=================
+// ===========small device login=================
+// $(document).ready(function(){
+//   $(".mobile_login").click(function(){
+//     $(".offcanvas.show").addClass("hidden");
+//   });
+// });

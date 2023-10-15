@@ -33,179 +33,27 @@
                         <ul id="menu_mb_ul" class="nav-accordion laber_mb_menu menu-init">
                             <li id="item_search" class="menu_item item-popup item-level-0" data-id="#search_pupop">
                                 <h3>WHAT ARE YOU LOOKING FOR?</h3>
-                                <a href="" class="header-search push_side header-icon" data-id="#search_pupop"
+                                <a href="" class="header_search push_side header-icon" data-id="#search_pupop"
                                     title="Search">
-                                    <span class="icon"><i class="icon-search fas fa-search"></i></span>
+                                    <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
 
                                     <span>Search</span>
                                 </a>
                             </li>
-                            <li class="item_signin menu-item item-popup item-level-0">
-                                <a href="" data-id="#login_pupop" data-bs-target="#login_pupop"
-                                    class="push_side header-icon" title="Login / Register">
-                                    <span class="icon"><i class="icon-users"></i></span>
+                            <li class="item_signin menu_item item-popup item-level-0">
+                                <a href="" data-id="#login_pupop" data-bs-target="#login_pupop" class="push_side"
+                                    title="Login / Register">
+                                    <span class="icon"><i class="fa-solid fa-user"></i></span>
 
                                     <span>Login / Register</span>
                                 </a>
-                                <div class="modal fade fixed" id="login_pupop" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered my-0">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="nav nav-tabs d-flex align-items-center justify-content-evenly"
-                                                id="nav-tab" role="tablist">
-                                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#login" type="button" role="tab"
-                                                    aria-controls="nav-home" aria-selected="true">
-                                                    Login
-                                                </button>
-                                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                                    data-bs-target="#registration" type="button" role="tab"
-                                                    aria-controls="nav-profile">
-                                                    Registration
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="tab-content">
-                                                    <div id="login" class="tab-pane show active description_main"
-                                                        data-order="1">
-                                                        <form method="post" action="#" id="customer_login"
-                                                            class="login login-register-form content-form ">
-                                                            <div class="login-form">
-                                                                <div class="label-text mb-3">
-                                                                    <label class="mb-1">Email Address
-                                                                        <span>*</span></label>
-                                                                    <p>
-                                                                        <input required="" class="input-info "
-                                                                            type="email" name="email" id="CustomerEmail"
-                                                                            autocomplete="email" autocorrect="off"
-                                                                            autocapitalize="off"
-                                                                            placeholder="Email Address">
-                                                                    </p>
-                                                                </div>
-                                                                <div class="label-text mb-3">
-                                                                    <label class="mb-1">Password <span>*</span></label>
-                                                                    <p>
-                                                                        <input required="" class="input-info "
-                                                                            type="password" value="" name="password"
-                                                                            id="CustomerPassword"
-                                                                            autocomplete="current-password"
-                                                                            placeholder="Password">
-                                                                    </p>
-                                                                </div>
-                                                                <div
-                                                                    class="label-text check d-flex justify-content-between mb-3">
-                                                                    <div class="check-box">
-                                                                        <input class="login-check" type="checkbox"
-                                                                            id="login-check" name="rememberme"
-                                                                            value="forever"><label class="text-label"
-                                                                            for="login-check"> Remember me </label>
-                                                                    </div>
-                                                                    <a href="#" id="RecoverPassword"
-                                                                        class="forgot">Forgot your
-                                                                        password ?</a>
-                                                                </div>
-                                                                <div class="group-button">
-                                                                    <input type="submit" class="button submit"
-                                                                        name="login" value="Login">
-                                                                </div>
-                                                                <div class="text text-center pt-3">
-                                                                    <p>New user discount applies only to full price
-                                                                        items. <br>By providing your email
-                                                                        address, you agree to our<br>
-                                                                        <a href="">Privacy Policy</a> and <a
-                                                                            href="#">Terms of
-                                                                            Service</a>.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <div id="registration" class="tab-pane additional_information"
-                                                        data-order="2">
-                                                        <form method="post" action="#" id="create_customer"
-                                                            accept-charset="UTF-8" data-login-with-shop-sign-up="true"
-                                                            class="register login-register-form content-form init"
-                                                            novalidate="novalidate"><input type="hidden"
-                                                                name="form_type" value="create_customer"><input
-                                                                type="hidden" name="utf8" value="✓">
-
-                                                            <div class="register-form">
-                                                                <div class="label-text mb-3">
-                                                                    <label>First Name <span>*</span></label>
-                                                                    <p>
-                                                                        <input required="" class="required input-info "
-                                                                            type="text" name="first_name"
-                                                                            id="RegisterForm-FirstName"
-                                                                            autocomplete="given-name"
-                                                                            placeholder="First Name">
-                                                                    </p>
-                                                                </div>
-                                                                <div class="label-text mb-3">
-                                                                    <label>Last Name <span>*</span></label>
-                                                                    <p>
-                                                                        <input required="" class="required input-info "
-                                                                            type="text" name="last_name"
-                                                                            id="RegisterForm-LastName"
-                                                                            autocomplete="family-name"
-                                                                            placeholder="Last Name">
-                                                                    </p>
-                                                                </div>
-                                                                <div class="label-text mb-3">
-                                                                    <label>Email Address <span>*</span></label>
-                                                                    <p>
-                                                                        <input required=""
-                                                                            class="required email input-info "
-                                                                            type="email" name="email"
-                                                                            id="RegisterForm-email" spellcheck="false"
-                                                                            autocapitalize="off" autocomplete="email"
-                                                                            aria-required="true"
-                                                                            placeholder="Email Address">
-                                                                    </p>
-
-                                                                </div>
-
-                                                                <div class="label-text mb-3">
-                                                                    <label>Password <span>*</span></label>
-                                                                    <p>
-                                                                        <input required="" placeholder="Password"
-                                                                            type="password" name="password"
-                                                                            id="CreatePassword" autocomplete="on"
-                                                                            class="required password input-info">
-                                                                    </p>
-                                                                </div>
-
-                                                                <div class="group-button">
-                                                                    <input type="submit" class="button submit"
-                                                                        value="Create New Account">
-                                                                </div>
-                                                                <div class="text text-center pt-3">
-                                                                    <p>New user discount applies only to full price
-                                                                        items. <br>By providing your email
-                                                                        address, you agree to our<br>
-                                                                        <a href="">Privacy Policy</a> and <a
-                                                                            href="/pages/terms-and-conditions">Terms of
-                                                                            Service</a>.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
 
-                            <li id="item_mobile_menu-0" class="menu-item item-level-0 has-children">
+                            <li id="item_mobile_menu-0" class="menu_item item-level-0 has-children">
                                 <a href="./index.html" target="_self">Home</a>
                             </li>
-                            <li id="item_mobile_menu-1" class="menu-item item-level-0 has-children">
-                                <a href="/collections/all" target="_self">
+                            <li id="item_mobile_menu-1" class="menu_item item-level-0 has-children">
+                                <a href="#" target="_self">
                                     <span>Shop
                                     </span> </a><span class="collapse">collapse</span>
                                 <ul class="sub-menu" style="display: none">
@@ -271,101 +119,23 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li id="item_mobile_menu-2" class="menu-item item-level-0 has-children">
-                                <a href="#" target="_self">
-                                    <span>page </span> </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="">
-                                    <li class="menu-item item-level-1">
-                                        <a href="/pages/about-us">About Us</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/password">Coming Soon</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/pages/faqs">FAQs</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/pages/our-stores">Our Team</a>
-                                    </li>
-                                    <li class="menu-item item-level-1 active">
-                                        <a href="/">Payment Plans</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="/404">Page 404</a>
-                                    </li>
-                                    <li class="menu-item item-level-1 active">
-                                        <a href="/">Gift Cards</a>
-                                    </li>
+                            <div class="dropdown menu_item">
+                                <a class=" dropdown-toggle" data-bs-toggle="dropdown">
+                                    page <i class="fa-solid fa-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/pages/about-us">About Us</a></li>
+                                    <li><a class="dropdown-item" href="/pages/about-us">Page 404</a></li>
+                                    <li><a class="dropdown-item" href="/pages/about-us">FAQs</a></li>
+
                                 </ul>
-                            </li>
-                            <li id="item_mobile_menu-3" class="menu-item item-level-0 has-children">
+                            </div>
+
+                            <li id="item_mobile_menu-3" class="menu_item item-level-0 has-children">
                                 <a href="/blogs/technology" target="_self">
                                     <span>Blog </span> </a><span class="collapse">collapse</span>
-                                <ul class="sub-menu" style="display: none">
-                                    <li class="menu-item item-level-1">
-                                        <a
-                                            href="https://demo-uminex.myshopify.com/blogs/technology/?preview_theme_id=147066650909">Blog
-                                            Left sidebar</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a
-                                            href="https://demo-uminex.myshopify.com/blogs/technology/?preview_theme_id=147368706333">Blog
-                                            Right sidebar</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a
-                                            href="https://demo-uminex.myshopify.com/blogs/technology/?preview_theme_id=147690389789">Grid
-                                            4 columns</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a
-                                            href="https://demo-uminex.myshopify.com/blogs/technology/?preview_theme_id=148057162013">Grid
-                                            3 columns</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="#">List - Left sidebar</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="#">List - right sidebar</a>
-                                    </li>
-                                    <li class="menu-item item-level-1">
-                                        <a href="#">List no sidebar</a>
-                                    </li>
-                                    <li class="menu-item item-level-1 has-children">
-                                        <a
-                                            href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029">
-                                            <span>Detail Blog </span> </a><span class="collapse">collapse</span>
-                                        <ul class="sub-menu2" style="display: none">
-                                            <li class="menu-item item-level-2">
-                                                <a
-                                                    href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029/?preview_theme_id=147066650909">
-                                                    Layout - left sidebar
-                                                </a>
-                                            </li>
-                                            <li class="menu-item item-level-2">
-                                                <a
-                                                    href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029/?preview_theme_id=147368706333">
-                                                    Layout - right sidebar
-                                                </a>
-                                            </li>
-                                            <li class="menu-item item-level-2">
-                                                <a
-                                                    href="https://demo-uminex.myshopify.com/blogs/technology/the-smartphone-has-just-launched-in-sep-2029/?preview_theme_id=147690389789">
-                                                    Layout without sidebar
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
                             </li>
-                            <li class="item_wishlist menu-item item-popup item-level-0">
-                                <a href="#" class="push_side" data-id="#wishlist_popup" title="Wishlist">
-                                    <span class="icon"><i class="icon-heart"></i></span>
-
-                                    <span>Wishlist</span>&nbsp;(<span class="count" data-js-wishlist-count="0">0</span>)
-                                </a>
-                            </li>
-                            <li id="" class="menu-item item-level-0">
+                            <li id="" class="menu_item item-level-0">
                                 <a href="./pages/contact/contact.html" target="_self">
                                     <span> Contact Us</span>
                                 </a>
@@ -428,18 +198,13 @@
             <div class="logo col-md-3 order-2 order-lg-1">
                 <a href="./index.html"><img src="./images/logo.avif" alt="" /></a>
             </div>
-            <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
-            </button>
             <div class="collapse navbar-collapse order-lg-2" id="navbarToggler">
                 <div class="search-bar p-0 mx-auto order-lg-2 d-none d-lg-block">
                     <div class="header-search">
                         <div class="laber_mini_cart">
                             <div class="mini_cart_wrap laber_search">
-                                <form action="/search" method="post"
-                                    class="search_header mini_search_frm pr js_frm_search" role="search">
+                                <form action="" method="post" class="search_header mini_search_frm pr js_frm_search"
+                                    role="search">
                                     <div class="row">
                                         <div class="search_catagory col-auto">
                                             <select name="product_type">
@@ -673,7 +438,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -705,12 +470,10 @@
                             <li>
                                 <a class="dropdown-item" href="./pages/about/about.html">About Us</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Coming Soon</a></li>
                             <li>
                                 <a class="dropdown-item" href="./pages/faqs/faqs.html">FAQs</a>
                             </li>
                             <li><a class="dropdown-item" href="#">Our Team</a></li>
-                            <li><a class="dropdown-item" href="#">Payment Plans</a></li>
                             <li>
                                 <a class="dropdown-item" href="./pages/notfound/notfound.html">Page 404</a>
                             </li>
@@ -724,32 +487,28 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#">Design <span>(00)</span></a>
+                                <a class="dropdown-item" href="./blogs/design/design.html">Design <span>(00)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Events <span>(00)</span></a>
+                                <a class="dropdown-item" href="./blogs/event/events.html">Events <span>(00)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Inspiration <span>(03)</span></a>
+                                <a class="dropdown-item" href="./blogs/inspiration/inspiratin.html">Inspiration
+                                    <span>(03)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Links & Quates <span>(00)</span></a>
+                                <a class="dropdown-item" href="./blogs/news/news.html">News <span>(03)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">News <span>(03)</span></a>
+                                <a class="dropdown-item" href="./blogs/social/social.html">Social <span>(03)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Social <span>(03)</span></a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="../../blogs/technology/technology.html">Technology
+                                <a class="dropdown-item" href="./blogs/technology/technology.html">Technology
                                     <span>(15)</span></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">Tips & Tricks <span>(04)</span></a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Uncatagorisd <span>(00)</span></a>
+                                <a class="dropdown-item" href="./blogs/tips and tricks/tips_tricks.html">Tips & Tricks
+                                    <span>(04)</span></a>
                             </li>
                         </ul>
                     </li>
