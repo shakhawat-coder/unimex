@@ -28,27 +28,16 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div id="mobile_menu" class="menu_mobile">
-            <ul id="menu_mb_ul" class="nav-accordion laber_mb_menu menu-init">
-              <li id="item_search" class="menu_item item-popup item-level-0" data-id="#search_pupop">
+          <div class="menu_mobile">
+            <ul>
+              <li id="item_search" class="menu_item position-relative">
                 <h3>WHAT ARE YOU LOOKING FOR?</h3>
-                <a href="" class="header_search push_side header-icon" data-id="#search_pupop" title="Search">
-                  <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-
-                  <span>Search</span>
-                </a>
+                <input class="header_search header-icon " placeholder="Search">
+                <span class="icon position-absolute"><i class="fa-solid fa-magnifying-glass"></i></span>
+                </input>
               </li>
-              <!-- <li class="item_signin menu_item item-popup item-level-0">
-                <a href="#login_pupop" data-id="#login_pupop" data-bs-target="#login_pupop" class="push_side"
-                  title="Login / Register">
-                  <span class="icon"><i class="fa-solid fa-user"></i></span>
-
-                  <span>Login / Register</span>
-                </a>
-              </li> -->
               <li class="signin menu_item item-list">
-                <a href="" data-id="#login_pupop" data-bs-toggle="modal" data-bs-target="#login_pupop"
-                  class=" push_side ">
+                <a href="" data-id="#login_pupop" data-bs-toggle="modal" data-bs-target="#login_pupop" class="  ">
                   <span class="icon"><i class="fa-solid fa-user"></i></span>
                   <span>Login / Register</span>
                 </a>
@@ -61,42 +50,42 @@
                       </div>
                       <div class="nav nav-tabs d-flex align-items-center justify-content-evenly" id="nav-tab"
                         role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#login"
-                          type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                          data-bs-target="#mobile_login" type="button" role="tab" aria-controls="nav-home"
+                          aria-selected="true">
                           Login
                         </button>
                         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                          data-bs-target="#registration" type="button" role="tab" aria-controls="nav-profile">
+                          data-bs-target="#mobile_registration" type="button" role="tab" aria-controls="nav-profile">
                           Register
                         </button>
                       </div>
                       <div class="modal-body">
                         <div class="tab-content">
-                          <div id="login" class="tab-pane show active description_main" data-order="1">
+                          <div id="mobile_login" class="tab-pane show active description_main" data-order="1">
                             <form method="post" action="#" id="customer_login"
                               class="login login-register-form content-form ">
                               <div class="login-form">
                                 <div class="label-text mb-3">
                                   <label class="mb-1">Email Address <span>*</span></label>
                                   <p>
-                                    <input required="" class="input-info " type="email" name="email" id="CustomerEmail"
-                                      autocomplete="email" autocorrect="off" autocapitalize="off"
-                                      placeholder="Email Address">
+                                    <input required="" class="input-info " type="email" name="email"
+                                      id="sm-CustomerEmail" autocomplete="email" placeholder="Email Address">
                                   </p>
                                 </div>
                                 <div class="label-text mb-3">
                                   <label class="mb-1">Password <span>*</span></label>
                                   <p>
                                     <input required="" class="input-info " type="password" value="" name="password"
-                                      id="CustomerPassword" autocomplete="current-password" placeholder="Password">
+                                      id="sm-CustomerPassword" placeholder="Password">
                                   </p>
                                 </div>
                                 <div class="label-text check d-flex justify-content-between mb-3">
                                   <div class="check-box">
-                                    <input class="login-check" type="checkbox" id="login-check" name="rememberme"
+                                    <input class="login-check" type="checkbox" id="sm-login-check" name="rememberme"
                                       value="forever"><label class="text-label" for="login-check"> Remember me </label>
                                   </div>
-                                  <a href="#" id="RecoverPassword" class="forgot">Forgot your
+                                  <a href="#" id="sm-RecoverPassword" class="forgot">Forgot your
                                     password ?</a>
                                 </div>
                                 <div class="group-button">
@@ -112,32 +101,29 @@
                               </div>
                             </form>
                           </div>
-                          <div id="registration" class="tab-pane additional_information" data-order="2">
-                            <form method="post" action="#" id="create_customer" accept-charset="UTF-8"
-                              data-login-with-shop-sign-up="true" class="register login-register-form content-form init"
-                              novalidate="novalidate"><input type="hidden" name="form_type"
-                                value="create_customer"><input type="hidden" name="utf8" value="✓">
-
+                          <div id="mobile_registration" class="tab-pane " data-order="2">
+                            <form method="post" action="#" id="sm-create_customer"
+                              class="register login-register-form content-form init">
                               <div class="register-form">
                                 <div class="label-text mb-3">
                                   <label>First Name <span>*</span></label>
                                   <p>
                                     <input required="" class="required input-info " type="text" name="first_name"
-                                      id="RegisterForm-FirstName" autocomplete="given-name" placeholder="First Name">
+                                      id="sm-RegisterForm-FirstName" autocomplete="given-name" placeholder="First Name">
                                   </p>
                                 </div>
                                 <div class="label-text mb-3">
                                   <label>Last Name <span>*</span></label>
                                   <p>
                                     <input required="" class="required input-info " type="text" name="last_name"
-                                      id="RegisterForm-LastName" autocomplete="family-name" placeholder="Last Name">
+                                      id="sm-RegisterForm-LastName" autocomplete="family-name" placeholder="Last Name">
                                   </p>
                                 </div>
                                 <div class="label-text mb-3">
                                   <label>Email Address <span>*</span></label>
                                   <p>
                                     <input required="" class="required email input-info " type="email" name="email"
-                                      id="RegisterForm-email" spellcheck="false" autocapitalize="off"
+                                      id="sm-RegisterForm-email" spellcheck="false" autocapitalize="off"
                                       autocomplete="email" aria-required="true" placeholder="Email Address">
                                   </p>
 
@@ -147,7 +133,7 @@
                                   <label>Password <span>*</span></label>
                                   <p>
                                     <input required="" placeholder="Password" type="password" name="password"
-                                      id="CreatePassword" autocomplete="on" class="required password input-info">
+                                      id="sm-CreatePassword" autocomplete="on" class="required password input-info">
                                   </p>
                                 </div>
 
@@ -171,10 +157,10 @@
                 </div>
               </li>
 
-              <li id="item_mobile_menu-0" class="menu_item item-level-0 has-children">
+              <li id="item_mobile_menu-0" class="menu_item  has-children">
                 <a href="./index.html" target="_self">Home</a>
               </li>
-              <li id="item_mobile_menu-1" class="menu_item item-level-0 has-children">
+              <li id="item_mobile_menu-1" class="menu_item  has-children">
                 <a href="#" target="_self">
                   <span>Shop
                   </span> </a><span class="collapse">collapse</span>
@@ -241,23 +227,47 @@
                   </li>
                 </ul>
               </li>
-              <div class="dropdown menu_item">
-                <a class=" dropdown-toggle" data-bs-toggle="dropdown">
-                  page <i class="fa-solid fa-chevron-down"></i>
+              <li class="dropdown menu_item">
+                <a class="dropdown-toggle" data-bs-toggle="dropdown">
+                  Page <i class="fa-solid fa-chevron-down"></i>
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="./pages/about/about.html">About Us</a></li>
                   <li><a class="dropdown-item" href="./pages/notfound/notfound.html">Page 404</a></li>
                   <li><a class="dropdown-item" href="./pages/faqs/faqs.html">FAQs</a></li>
-
                 </ul>
-              </div>
-
-              <li id="item_mobile_menu-3" class="menu_item item-level-0 has-children">
-                <a href="/blogs/technology" target="_self">
-                  <span>Blog </span> </a><span class="collapse">collapse</span>
               </li>
-              <li id="" class="menu_item item-level-0">
+              <li class="dropdown menu_item">
+                <a class=" dropdown-toggle" data-bs-toggle="dropdown">
+                  Blog <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./blogs/design/design.html">Design <span>(00)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/event/events.html">Events <span>(00)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/inspiration/inspiratin.html">Inspiration
+                      <span>(03)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/news/news.html">News <span>(03)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/social/social.html">Social <span>(03)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/technology/technology.html">Technology <span>(15)</span></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./blogs/tips and tricks/tips_tricks.html">Tips & Tricks
+                      <span>(04)</span></a>
+                  </li>
+                </ul>
+              </li>
+              <li id="" class="menu_item ">
                 <a href="./pages/contact/contact.html" target="_self">
                   <span> Contact Us</span>
                 </a>
@@ -274,8 +284,8 @@
       <ul class="box-minicart d-block d-lg-none ">
         <li>
           <div class="minicart">
-            <div class="d-flex align-items-center cart-block box-has-content">
-              <a href="./pages/cart/cart.html" class="push_side header-icon" data-id="#js_cart_popup" title="Your Cart">
+            <div class="d-flex align-items-center">
+              <a href="./pages/cart/cart.html" class=" header-icon">
                 <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
@@ -287,7 +297,7 @@
                     d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
                     fill="#212529"></path>
                 </svg>
-                <span class="header_counter js-cart-count" data-js-cart-count="0">0</span>
+                <span class="header_counter">0</span>
               </a>
             </div>
           </div>
@@ -298,11 +308,10 @@
           <form action="#" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
             <div class="row">
               <div class="frm_search_input col">
-                <input class="search_header_input" autocomplete="off" type="text" name="q"
-                  placeholder="Search for products ..." />
+                <input class="search_header_input" type="text" placeholder="Search for products ..." />
               </div>
               <div class="col-auto btn_search">
-                <button class="search_header_submit js_btn_search btn btn-primary" aria-label="Search">
+                <button class="search_header_submit js_btn_search btn btn-primary">
                   <span>Search</span>
                 </button>
               </div>
@@ -314,13 +323,13 @@
   </nav>
   <header class="navbar top_navbar navbar-expand-lg d-none d-lg-block">
     <div class="container">
-      <div class="logo col-md-3 order-2 order-lg-1">
+      <div class="col-md-3 order-2 order-lg-1 logo">
         <a href="./index.html"><img src="./images/logo.avif" alt="" /></a>
       </div>
       <div class="collapse navbar-collapse order-lg-2" id="navbarToggler">
         <div class="search-bar p-0 mx-auto order-lg-2 d-none d-lg-block">
           <div class="header-search">
-            <form action="/search" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
+            <form action="#" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
               <div class="row">
                 <div class="search_catagory col-auto">
                   <select name="product_type">
@@ -328,24 +337,14 @@
                     <option value="Accessories">Accessories</option>
                     <option value="Basketball">Basketball</option>
                     <option value="Computer">Computer</option>
-                    <option value="Computer &amp; Desktop">
-                      Computer &amp; Desktop
-                    </option>
-                    <option value="Dining &amp; Kitchen">
-                      Dining &amp; Kitchen
-                    </option>
-                    <option value="Fresh Vegetables">
-                      Fresh Vegetables
-                    </option>
+                    <option value="Computer &amp; Desktop">Computer & Desktop</option>
+                    <option value="Dining &amp; Kitchen">Dining & Kitchen</option>
+                    <option value="Fresh Vegetables">Fresh Vegetables</option>
                     <option value="Laptop">Laptop</option>
-                    <option value="Laptop &amp; Ipad">
-                      Laptop &amp; Ipad
-                    </option>
+                    <option value="Laptop &amp; Ipad">Laptop & Ipad</option>
                     <option value="Living Room">Living Room</option>
                     <option value="Logitech">Logitech</option>
-                    <option value="Sectional Sofas">
-                      Sectional Sofas
-                    </option>
+                    <option value="Sectional Sofas">Sectional Sofas</option>
                     <option value="Shoes">Shoes</option>
                     <option value="Smart Phones &amp; Tablets">
                       Smart Phones &amp; Tablets
@@ -379,7 +378,7 @@
           <ul class="header-control d-flex align-items-center">
             <li class="signin item-list">
               <a href="" data-id="#login_reg_pupop" data-bs-toggle="modal" data-bs-target="#login_reg_pupop"
-                class="d-flex align-items-center push_side header-icon" title="Login">
+                class="d-flex align-items-center  header-icon" title="Login">
                 <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
@@ -414,15 +413,14 @@
                     <div class="modal-body">
                       <div class="tab-content">
                         <div id="login" class="tab-pane show active description_main" data-order="1">
-                          <form method="post" action="#" id="customer_login"
+                          <form method="post" action="#" id="sm-customer_login"
                             class="login login-register-form content-form ">
                             <div class="login-form">
                               <div class="label-text mb-3">
                                 <label class="mb-1">Email Address <span>*</span></label>
                                 <p>
                                   <input required="" class="input-info " type="email" name="email" id="CustomerEmail"
-                                    autocomplete="email" autocorrect="off" autocapitalize="off"
-                                    placeholder="Email Address">
+                                    autocomplete="email" placeholder="Email Address">
                                 </p>
                               </div>
                               <div class="label-text mb-3">
@@ -453,12 +451,9 @@
                             </div>
                           </form>
                         </div>
-                        <div id="registration" class="tab-pane additional_information" data-order="2">
-                          <form method="post" action="#" id="create_customer" accept-charset="UTF-8"
-                            data-login-with-shop-sign-up="true" class="register login-register-form content-form init"
-                            novalidate="novalidate"><input type="hidden" name="form_type" value="create_customer"><input
-                              type="hidden" name="utf8" value="✓">
-
+                        <div id="registration" class="tab-pane " data-order="2">
+                          <form method="post" action="#" id="create_customer"
+                            class="register login-register-form content-form init">
                             <div class="register-form">
                               <div class="label-text mb-3">
                                 <label>First Name <span>*</span></label>
@@ -483,7 +478,6 @@
                                 </p>
 
                               </div>
-
                               <div class="label-text mb-3">
                                 <label>Password <span>*</span></label>
                                 <p>
@@ -491,7 +485,6 @@
                                     id="CreatePassword" autocomplete="on" class="required password input-info">
                                 </p>
                               </div>
-
                               <div class="group-button">
                                 <input type="submit" class="button submit" value="Create New Account">
                               </div>
@@ -512,7 +505,7 @@
               </div>
             </li>
             <li class="laber-wishlist d-none d-lg-block">
-              <a data-id="#wishlist_popup" href="#" class="push_side header-icon" title="Wishlist">
+              <a data-id="#wishlist_popup" href="#" class=" header-icon" title="Wishlist">
                 <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
@@ -524,9 +517,8 @@
             </li>
             <li class="box-minicart">
               <div class="minicart">
-                <div class="d-flex align-items-center cart-block box-has-content">
-                  <a href="./pages/cart/cart.html" class="push_side header-icon" data-id="#js_cart_popup"
-                    title="Your Cart">
+                <div class="d-flex align-items-center">
+                  <a href="./pages/cart/cart.html" class=" header-icon" data-id="#js_cart_popup" title="Your Cart">
                     <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
@@ -538,7 +530,7 @@
                         d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
                         fill="#212529"></path>
                     </svg>
-                    <span class="header_counter js-cart-count" data-js-cart-count="0">0</span>
+                    <span class="header_counter">0</span>
                   </a>
                   <span data-total-price="" class="total-price">
                     <span class="text">Your Cart </span><br />
@@ -554,8 +546,8 @@
       <ul class="box-minicart d-block d-lg-none order-3">
         <li>
           <div class="minicart">
-            <div class="d-flex align-items-center cart-block box-has-content">
-              <a href="./pages/cart/cart.html" class="push_side header-icon" data-id="#js_cart_popup" title="Your Cart">
+            <div class="d-flex align-items-center  ">
+              <a href="./pages/cart/cart.html" class=" header-icon">
                 <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
@@ -567,7 +559,7 @@
                     d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
                     fill="#212529"></path>
                 </svg>
-                <span class="header_counter js-cart-count" data-js-cart-count="0">0</span>
+                <span class="header_counter ">0</span>
               </a>
             </div>
           </div>
@@ -575,14 +567,13 @@
       </ul>
       <div class="search-bar pt-4 col-12 d-block d-lg-none order-4">
         <div class="header-search">
-          <form action="/search" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
+          <form action="" method="post" class="search_header mini_search_frm pr js_frm_search" role="search">
             <div class="row">
               <div class="frm_search_input col">
-                <input class="search_header_input" autocomplete="off" type="text" name="q"
-                  placeholder="Search for products ..." />
+                <input class="search_header_input" type="text" name="q" placeholder="Search for products ..." />
               </div>
               <div class="col-auto btn_search">
-                <button class="search_header_submit js_btn_search btn btn-primary" aria-label="Search">
+                <button class="search_header_submit js_btn_search btn btn-primary">
                   <span>Search</span>
                 </button>
               </div>

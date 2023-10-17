@@ -149,6 +149,11 @@ h1,h2,h3,h4,h5,h6,p{
 .offcanvas-header {
     display: inline;
     text-align: center;
+    
+   text-transform: uppercase;
+}
+.offcanvas-header .btn-close {
+    font-size: 12px;
 }
 .menu_mobile .menu_item h3 {
     font-weight: 700;
@@ -158,6 +163,15 @@ h1,h2,h3,h4,h5,h6,p{
     margin-bottom: 15px;
     text-transform: uppercase;
     color: var(--color-text-menu-mobile);
+}
+.offcanvas-body input{
+    width: 100%;
+    border: 1px solid #E5E8EC;
+}
+.offcanvas-body #item_search span{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
 }
 .menu_mobile .menu_item>a {
     color: var(--color-text-menu-mobile);
@@ -194,9 +208,6 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .dropdown-menu{
     transform: translateY(0px);
-}
-.modal-backdrop.show {
-    opacity: 0;
 }
 .modal-backdrop {
     z-index: 105;
@@ -1594,14 +1605,19 @@ input {
         left: 90%;
         color: var(--color-icon-header);
     }
-    .dropdown-menu{
+    nav .dropdown-menu{
         transform: translateY(0px);
-        
+        visibility: hidden;
+        display: none;
+    }
+    .dropdown-menu.show{
+        visibility: visible;
     }
     .dropdown-menu[data-bs-popper] {
         top: 100%;
         left: 0;
         margin-top: 0;
+        
     }
     .nav-item .nav-link {
         font-weight: 500;
@@ -1626,6 +1642,11 @@ input {
     .discount_product .countdown_banner {
         height: 240px;   
         margin-bottom: 10px;
+    }
+    /* =================discount section============ */
+    .discount_product .countdown_banner img {
+        
+        object-fit: contain;
     }
     /* ==============featured product=============== */
     .section_header a {
@@ -1733,9 +1754,13 @@ input {
         color: var(--color-icon-header);
     }
     
-    .dropdown-menu{
+    nav .dropdown-menu{
         transform: translateY(0px);
-        
+        visibility: hidden;
+        display: none;
+    }
+    .dropdown-menu.show{
+        visibility: visible;
     }
     .dropdown-menu[data-bs-popper] {
         top: 100%;
@@ -1834,9 +1859,13 @@ input {
         left: 90%;
         color: var(--color-icon-header);
     }
-    .dropdown-menu{
+    nav .dropdown-menu{
         transform: translateY(0px);
-        
+        visibility: hidden;
+        display: none;
+    }
+    .dropdown-menu.show{
+        visibility: visible;
     }
     .dropdown-menu[data-bs-popper] {
         top: 100%;
