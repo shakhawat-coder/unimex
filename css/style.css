@@ -1654,6 +1654,7 @@ input {
     /* <!-- ==============top selling products=================== --> */
     .top_selling_item .card .card-body {
         width: 60%;
+        padding: 0 0 0 10px;
     }
     .top_selling_item .card_image{
         width: 40%;
