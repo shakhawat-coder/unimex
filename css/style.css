@@ -1653,10 +1653,10 @@ input {
 
     /* <!-- ==============top selling products=================== --> */
     .top_selling_item .card .card-body {
-        width: 50%;
+        width: 60%;
     }
     .top_selling_item .card_image{
-        width: 50%;
+        width: 40%;
       }
     .top_selling_item .card_image img{
         width: 90%;
