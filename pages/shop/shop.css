@@ -1,0 +1,257 @@
+:root {
+    --color-bg-body: #f1f5f6;
+    --color-text-body: #515d66;
+    --color-main: #212529;
+    --color-secondary: #dd3842;
+    --color-link: #212529;
+    --color-link-hover: #2b38d1;
+    --color-scrollbar: #8d979e;
+    --color-link-menu: #212529;
+    --color-link-menu-heading: #212529;
+    --color-link-menu-sub: #515d66;
+    --color-link-menu-hover: #2b38d1;
+    --color-name-product: #212529;
+    --color-name-product-hover: #2b38d1;
+    --color-star-product: #ffb800;
+    --color-compare-price-product: #8d979e;
+    --color-price-product: #2b38d1;
+    --color-current-product: #dd3842;
+    --color-cart-product: #2b38d1;
+    --color-out-product: #dd3842;
+    --color-btn-product: #515d66;
+    --color-btn-product-hover: #ffffff;
+    --bg-btn-product: #ffffff;
+    --bg-btn-product-hover: #2b38d1;
+    --color-label-hot: #dd3842;
+    --color-label-new: #008a00;
+    --color-label-sale: #dd3842;
+    --color-label-in: #008a00;
+    --color-label-out: #ef262c;
+    --color-btn-text: #ffffff;
+    --color-btn: #2b38d1;
+    --color-border-btn: #2b38d1;
+    --color-btn-text_hover: #ffffff;
+    --color-btn-hover: #212529;
+    --color-border-btn-hover: #212529;
+    --color-cl-btn-p-n: #ffffff;
+    --color-bg-btn-p-n: #2b38d1;
+    --color-cl-btn-p-n-hover: #ffffff;
+    --color-bg-btn-p-n-hover: #2b38d1;
+}
+:root {
+    --color-status-bg: #f3f4f6;
+    --color-sold-bg: #ef262c;
+    --color-title-countdown: ;
+    --color-number-countdown: #ffffff;
+    --bg-text-countdown: #dd3842;
+}
+:root {
+    --color-title-breadcrumb: #212529;
+    --color-text-breadcrumb: #8D979E;
+}
+::marker{
+    display: none;
+    opacity: 0;
+}
+details > summary {
+    cursor: pointer;
+    list-style: none;
+  }
+#breadcrumb{
+    background: url(../../images/shop-breadcrumbs-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    display: flex;
+}
+.breadcrumb_wrapper h2{
+    font-style: normal;
+    line-height: 1;
+    font-size: 28px;
+    color: var(--color-text-body);
+    font-weight: 600;
+}
+.breadcrumb{
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.breadcrumb a,.breadcrumb li{
+    color: #fff !important;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+}
+/* ===================Shop================= */
+#shop{
+    background: var(--color-bg-body);
+    padding: 30px 0;
+}
+/* ================aside section================ */
+aside{
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.menu_categories{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e8ec;
+    margin-bottom: 30px;
+}
+.facets details{
+    border-bottom: 1px solid #e5e8ec;
+    padding: 0 0 20px;
+    margin-bottom: 30px;
+}
+details .fa-plus,
+details[open] .fa-minus{
+    display: block;
+}
+details[open] .fa-plus,
+details .fa-minus{
+    display: none;
+}
+details:last-child{
+    border: none;
+}
+.menu_categories .facets__heading,
+summary span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+}
+.menu_categories .nav-accordion .menu-item {
+    position: relative;
+}
+.menu_categories .nav-accordion .menu-item>a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    gap: 15px;
+    color: var(--color-link);
+    transition: all linear .3s;
+}
+.menu_categories .nav-accordion .menu-item>a:hover {
+    color: var(--color-link-hover);
+}
+.menu_categories .nav-accordion .menu-item.active>a {
+    color: var(--color-link-hover);
+}
+.menu_categories .nav-accordion .menu-item>a:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border: 1px solid #e5e8ec;
+    border-radius: 2px;
+}
+.menu_categories .nav-accordion .menu-item.active>a:before {
+    background-color: var(--color-link-hover);
+    border-color: var(--color-link-hover);
+}
+.menu_categories .nav-accordion .menu-item>a:after {
+    content: "\2713";
+    position: absolute;
+    left: 1px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: #fff;
+}
+
+/* ===============filter price section=============  */
+.facets__price {
+    display: flex;
+    padding: 15px;
+}
+.facets__price .field-currency {
+    align-self: center;
+    margin-right: .6rem;
+}
+.field {
+    align-items: center;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.field__input, .select__select, .customer .field input, .customer select {
+    color: var(--color-main);
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+    position: relative;
+    border: 1px solid #f2f2f6;
+
+}
+.field:last-child {
+    margin-left: 1rem;
+}
+
+/* ================filter colour================ */
+details input{
+    margin-right: 10px;
+}
+.facet-checkbox {
+    padding: 0;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    word-break: break-word;
+    line-height: 30px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.facet-checkbox .label-color {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    right: 0;
+    border-radius: 100%;
+    border: 1px solid #e5e8ec;
+}
+
+/* ======================product section=============== */
+.collection_hero{
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 10px;
+}
+.collection-description{
+    margin-top: 20px;
+}
+.collection-description p{
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.feature_product_wrappers{
+    margin-top: 30px !important;
+}
+ .feature_product_wrappers a h5{
+    color: var(--color-name-product);
+    width: 100%;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    transition: all linear .3s;
+}
