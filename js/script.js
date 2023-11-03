@@ -431,19 +431,3 @@ function initializeClock(id, endtime) {
 // count down timer:
 var deadline = new Date(Date.now() + 1 * 30 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
-
-// =======================magnifying image===============
-
-  
-
-// ===========small device login=================
-// $(document).ready(function(){
-//   $(".mobile_login").click(function(){
-//     $(".offcanvas.show").addClass("hidden");
-//   });
-// });
-// $(document).ready(function(){
-//   $(".login_pupop").click(function(){
-//     $(".offcanvas").addClass("hidden");
-//   });
-// }); 
