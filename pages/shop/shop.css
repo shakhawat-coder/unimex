@@ -255,3 +255,20 @@ details input{
     line-height: 20px;
     transition: all linear .3s;
 }
+
+@media (max-width:440px) {
+    .collection_hero{
+        width: 91vw;
+        margin: 0 auto;
+    }
+    .single_item .card {
+        width: 91vw;
+        margin:  0 auto;
+    }
+}
+@media (min-width:441px) and (max-width:575px) {
+    .single_item .card {
+        width: 45vw;
+        /* margin: 0; */
+    }
+}

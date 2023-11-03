@@ -36,133 +36,6 @@
                 <input class="header_search header-icon" placeholder="Search" />
                 <span class="icon position-absolute"><i class="fa-solid fa-magnifying-glass"></i></span>
               </li>
-              <li class="signin menu_item item-list">
-                <a href="" data-id="#login_pupop" data-bs-toggle="modal" data-bs-target="#login_pupop" class="  ">
-                  <span class="icon"><i class="fa-solid fa-user"></i></span>
-                  <span>Login / Register</span>
-                </a>
-                <div class="modal fade fixed" id="login_pupop" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered my-0">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="nav nav-tabs d-flex align-items-center justify-content-evenly" id="nav-tab"
-                        role="tablist">
-                        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                          data-bs-target="#mobile_login" type="button" role="tab" aria-controls="nav-home"
-                          aria-selected="true">
-                          Login
-                        </button>
-                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                          data-bs-target="#mobile_registration" type="button" role="tab" aria-controls="nav-profile">
-                          Register
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="tab-content">
-                          <div id="mobile_login" class="tab-pane show active description_main" data-order="1">
-                            <form method="post" action="#" id="customer_login"
-                              class="login login-register-form content-form">
-                              <div class="login-form">
-                                <div class="label-text mb-3">
-                                  <label class="mb-1">Email Address <span>*</span></label>
-                                  <p>
-                                    <input required="" class="input-info" type="email" name="email"
-                                      id="sm-CustomerEmail" autocomplete="email" placeholder="Email Address" />
-                                  </p>
-                                </div>
-                                <div class="label-text mb-3">
-                                  <label class="mb-1">Password <span>*</span></label>
-                                  <p>
-                                    <input required="" class="input-info" type="password" value="" name="password"
-                                      id="sm-CustomerPassword" placeholder="Password" />
-                                  </p>
-                                </div>
-                                <div class="label-text check d-flex justify-content-between mb-3">
-                                  <div class="check-box">
-                                    <input class="login-check" type="checkbox" id="sm-login-check" name="rememberme"
-                                      value="forever" /><label class="text-label" for="login-check">
-                                      Remember me
-                                    </label>
-                                  </div>
-                                  <a href="#" id="sm-RecoverPassword" class="forgot">Forgot your password ?</a>
-                                </div>
-                                <div class="group-button">
-                                  <input type="submit" class="button submit" name="login" value="Login" />
-                                </div>
-                                <div class="text text-center pt-3">
-                                  <p>
-                                    New user discount applies only to full
-                                    price items. <br />By providing your email
-                                    address, you agree to our<br />
-                                    <a href="">Privacy Policy</a> and
-                                    <a href="#">Terms of Service</a>.
-                                  </p>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                          <div id="mobile_registration" class="tab-pane" data-order="2">
-                            <form method="post" action="#" id="sm-create_customer"
-                              class="register login-register-form content-form init">
-                              <div class="register-form">
-                                <div class="label-text mb-3">
-                                  <label>First Name <span>*</span></label>
-                                  <p>
-                                    <input required="" class="required input-info" type="text" name="first_name"
-                                      id="sm-RegisterForm-FirstName" autocomplete="given-name"
-                                      placeholder="First Name" />
-                                  </p>
-                                </div>
-                                <div class="label-text mb-3">
-                                  <label>Last Name <span>*</span></label>
-                                  <p>
-                                    <input required="" class="required input-info" type="text" name="last_name"
-                                      id="sm-RegisterForm-LastName" autocomplete="family-name"
-                                      placeholder="Last Name" />
-                                  </p>
-                                </div>
-                                <div class="label-text mb-3">
-                                  <label>Email Address <span>*</span></label>
-                                  <p>
-                                    <input required="" class="required email input-info" type="email" name="email"
-                                      id="sm-RegisterForm-email" spellcheck="false" autocapitalize="off"
-                                      autocomplete="email" aria-required="true" placeholder="Email Address" />
-                                  </p>
-                                </div>
-
-                                <div class="label-text mb-3">
-                                  <label>Password <span>*</span></label>
-                                  <p>
-                                    <input required="" placeholder="Password" type="password" name="password"
-                                      id="sm-CreatePassword" autocomplete="on" class="required password input-info" />
-                                  </p>
-                                </div>
-
-                                <div class="group-button">
-                                  <input type="submit" class="button submit" value="Create New Account" />
-                                </div>
-                                <div class="text text-center pt-3">
-                                  <p>
-                                    New user discount applies only to full
-                                    price items. <br />By providing your email
-                                    address, you agree to our<br />
-                                    <a href="">Privacy Policy</a> and
-                                    <a href="/pages/terms-and-conditions">Terms of Service</a>.
-                                  </p>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
               <li id="item_mobile_menu-0" class="menu_item has-children">
                 <a href="../../index.html" target="_self">Home</a>
               </li>
@@ -298,7 +171,130 @@
           <img src="../../images/logo.avif" alt="" />
         </div>
       </a>
-      <ul class="box-minicart d-block d-lg-none">
+      <ul class="box-minicart d-flex d-lg-none">
+        <li class="signin item-list">
+          <a href="" data-id="#login_reg_pupop" data-bs-toggle="modal" data-bs-target="#login_reg_pupop"
+            class="d-flex align-items-center  header-icon" title="Login">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
+                fill="#212529"></path>
+              <path
+                d="M11.4996 13.8C13.3079 13.8003 15.044 13.0842 16.3345 11.8057C17.6249 10.5272 18.3665 8.78854 18.3996 6.96384C18.3996 5.11691 17.6726 3.34563 16.3786 2.03966C15.0846 0.733688 13.3296 0 11.4996 0C9.66962 0 7.91457 0.733688 6.62057 2.03966C5.32657 3.34563 4.59961 5.11691 4.59961 6.96384C4.63276 8.78854 5.37433 10.5272 6.66476 11.8057C7.95518 13.0842 9.69132 13.8003 11.4996 13.8ZM6.89961 6.96384C6.89961 5.73255 7.38425 4.5517 8.24692 3.68105C9.10959 2.8104 10.2796 2.32128 11.4996 2.32128C12.7196 2.32128 13.8896 2.8104 14.7523 3.68105C15.615 4.5517 16.0996 5.73255 16.0996 6.96384C16.0996 8.19512 15.615 9.37597 14.7523 10.2466C13.8896 11.1173 12.7196 11.6064 11.4996 11.6064C10.2796 11.6064 9.10959 11.1173 8.24692 10.2466C7.38425 9.37597 6.89961 8.19512 6.89961 6.96384Z"
+                fill="#212529"></path>
+            </svg>
+          </a>
+          <div class="modal fade fixed" id="login_reg_pupop" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered my-0">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="nav nav-tabs d-flex align-items-center justify-content-evenly" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#login"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    Login
+                  </button>
+                  <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#registration"
+                    type="button" role="tab" aria-controls="nav-profile">
+                    Registration
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="tab-content">
+                    <div id="login" class="tab-pane show active description_main" data-order="1">
+                      <form method="post" action="#" id="sm-customer_login"
+                        class="login login-register-form content-form ">
+                        <div class="login-form">
+                          <div class="label-text mb-3">
+                            <label class="mb-1">Email Address <span>*</span></label>
+                            <p>
+                              <input required="" class="input-info " type="email" name="email" id="CustomerEmail"
+                                autocomplete="email" placeholder="Email Address">
+                            </p>
+                          </div>
+                          <div class="label-text mb-3">
+                            <label class="mb-1">Password <span>*</span></label>
+                            <p>
+                              <input required="" class="input-info " type="password" value="" name="password"
+                                id="CustomerPassword" autocomplete="current-password" placeholder="Password">
+                            </p>
+                          </div>
+                          <div class="label-text check d-flex justify-content-between mb-3">
+                            <div class="check-box">
+                              <input class="login-check" type="checkbox" id="login-check" name="rememberme"
+                                value="forever"><label class="text-label" for="login-check"> Remember me </label>
+                            </div>
+                            <a href="#" id="RecoverPassword" class="forgot">Forgot your
+                              password ?</a>
+                          </div>
+                          <div class="group-button">
+                            <input type="submit" class="button submit" name="login" value="Login">
+                          </div>
+                          <div class="text text-center pt-3">
+                            <p>New user discount applies only to full price items. <br>By providing your email
+                              address, you agree to our<br>
+                              <a href="">Privacy Policy</a> and <a href="#">Terms of
+                                Service</a>.
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div id="registration" class="tab-pane " data-order="2">
+                      <form method="post" action="#" id="create_customer"
+                        class="register login-register-form content-form init">
+                        <div class="register-form">
+                          <div class="label-text mb-3">
+                            <label>First Name <span>*</span></label>
+                            <p>
+                              <input required="" class="required input-info " type="text" name="first_name"
+                                id="RegisterForm-FirstName" autocomplete="given-name" placeholder="First Name">
+                            </p>
+                          </div>
+                          <div class="label-text mb-3">
+                            <label>Last Name <span>*</span></label>
+                            <p>
+                              <input required="" class="required input-info " type="text" name="last_name"
+                                id="RegisterForm-LastName" autocomplete="family-name" placeholder="Last Name">
+                            </p>
+                          </div>
+                          <div class="label-text mb-3">
+                            <label>Email Address <span>*</span></label>
+                            <p>
+                              <input required="" class="required email input-info " type="email" name="email"
+                                id="RegisterForm-email" spellcheck="false" autocapitalize="off" autocomplete="email"
+                                aria-required="true" placeholder="Email Address">
+                            </p>
+
+                          </div>
+                          <div class="label-text mb-3">
+                            <label>Password <span>*</span></label>
+                            <p>
+                              <input required="" placeholder="Password" type="password" name="password"
+                                id="CreatePassword" autocomplete="on" class="required password input-info">
+                            </p>
+                          </div>
+                          <div class="group-button">
+                            <input type="submit" class="button submit" value="Create New Account">
+                          </div>
+                          <div class="text text-center pt-3">
+                            <p>New user discount applies only to full price items. <br>By providing your email
+                              address, you agree to our<br>
+                              <a href="">Privacy Policy</a> and <a href="/pages/terms-and-conditions">Terms of
+                                Service</a>.
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
         <li>
           <div class="minicart">
             <div class="d-flex align-items-center">

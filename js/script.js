@@ -442,8 +442,8 @@ initializeClock('clockdiv', deadline);
 //     $(".offcanvas.show").addClass("hidden");
 //   });
 // });
-$(document).ready(function(){
-  $(".login_pupop").click(function(){
-    $(".offcanvas").addClass("hidden");
-  });
-}); 
+// $(document).ready(function(){
+//   $(".login_pupop").click(function(){
+//     $(".offcanvas").addClass("hidden");
+//   });
+// }); 
